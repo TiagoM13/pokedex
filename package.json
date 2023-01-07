@@ -1,0 +1,90 @@
+{
+  "name": "pokedex",
+  "description": "project ReactJs",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "react-scripts test --env jest-environment-jsdom-fourteen --watchAll=false --silent",
+    "jestrunner": "yarn react-scripts test --watchAll=false --env=jsdom",
+    "test:coverage": "react-scripts test --coverage --watchAll false --env jest-environment-jsdom-fourteen",
+    "test:staged": "npm test -- --findRelatedTests",
+    "test:ci": "yarn test --passWithNoTests --silent --noStackTrace --runInBand",
+    "eject": "react-scripts eject",
+    "code:check": "yarn code:lint; yarn code:format --check",
+    "code:clean": "yarn code:lint --fix; yarn code:format --write",
+    "code:lint": "eslint --ext .js,.jsx,.ts,.tsx \"src/\"",
+    "code:format": "prettier './src/**/**.{js,jsx,ts,tsx}'",
+    "code:check:rules": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
+    "postinstall": "husky install; chmod ug+x .husky/*; npm run prepare",
+    "prepare": "is-ci || husky install"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "lint-staged": {
+    "*.{ts,js,tsx,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.json": [
+      "prettier --write"
+    ]
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest",
+      "^.+\\.(js|jsx)$": "babel-jest"
+    },
+    "collectCoverageFrom": [
+      "src/**/*.tsx"
+    ],
+    "transformIgnorePatterns": [
+      "/node_modules/(?!@hookform/*).+\\.[t|j]sx?$"
+    ]
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "@types/node": "^14.14.35",
+    "@typescript-eslint/eslint-plugin": "^4.5.0",
+    "@typescript-eslint/parser": "^4.5.0",
+    "eslint": "7.11.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.14.0",
+    "eslint-import-resolver-typescript": "^2.3.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-import-helpers": "^1.1.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^6.0.0",
+    "jest-environment-jsdom-fourteen": "^1.0.1",
+    "jest-location-mock": "^1.0.9",
+    "lint-staged": "10.5.4",
+    "prettier": "2.2.1",
+    "ts-jest": "^26.5.4",
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.9",
+    "@vitejs/plugin-react": "^3.0.0",
+    "typescript": "^4.9.3",
+    "vite": "^4.0.0"
+  },
+  "baseUrl": "./node_modules/@types",
+  "typeRoots": [
+    "types"
+  ],
+  "author": "Tiago Mota",
+  "license": "ISC"
+}

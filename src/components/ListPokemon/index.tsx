@@ -1,8 +1,6 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
 
-import axios from 'axios';
-
 import { useGetPokemonsData } from '../../hooks/usePokemons';
 import { getPokemonSkills, getTypesPokemons } from '../../utils/pokemonsData';
 

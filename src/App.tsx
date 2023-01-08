@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import { Header } from "./components/Header";
-import { ListPokemon } from "./components/ListPokemon";
+import { Header } from './components/Header';
+import { ListPokemon } from './components/ListPokemon';
 
 const App = () => {
   return (

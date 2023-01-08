@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
 export const Header: React.FC = () => {
-  const title = "Pokedex List";
+  const title = 'Pokedex List';
 
   return (
     <div>

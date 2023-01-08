@@ -3,25 +3,11 @@ import React, { useEffect, useState } from 'react';
 
 import axios from 'axios';
 
+import { Pokemons } from '../../interfaces/pokemons';
 import { getPokemonSkills, getTypesPokemons } from '../../utils/pokemonsData';
 
-interface Props {
-  data: {
-    name: string;
-    order: string;
-    sprites: {
-      back_default: string;
-      back_shiny: string;
-      front_default: string;
-      front_shiny: string;
-    };
-    types: [];
-    abilities: [];
-  };
-}
-
 export const ListPokemon: React.FC = () => {
-  const [pokemons, setPokemons] = useState<Props[]>([]);
+  const [pokemons, setPokemons] = useState<Pokemons[]>([]);
 
   const getPokemons = () => {
     const endpoints = [];

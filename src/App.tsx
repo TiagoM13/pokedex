@@ -1,13 +1,13 @@
 import React from 'react';
 
 import { Header } from './components/Header';
-import { ListPokemon } from './components/ListPokemon';
+import PokedexList from './pages/Pokedex';
 
 const App = () => {
   return (
     <>
       <Header />
-      <ListPokemon />
+      <PokedexList />
     </>
   );
 };

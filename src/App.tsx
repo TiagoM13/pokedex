@@ -1,9 +1,15 @@
-import React from "react";
+import React from 'react';
 
-import { Header } from "./components/Header";
+import { Header } from './components/Header';
+import PokedexList from './pages/Pokedex';
 
 const App = () => {
-  return <Header />;
+  return (
+    <>
+      <Header />
+      <PokedexList />
+    </>
+  );
 };
 
 export default App;

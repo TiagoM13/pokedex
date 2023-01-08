@@ -5,7 +5,7 @@ export const Header: React.FC = () => {
 
   return (
     <div>
-      <h1>{title}</h1>
+      <h1 className="text-zinc-800 font-bold text-3xl text-center">{title}</h1>
     </div>
   );
 };

@@ -7,7 +7,6 @@ import { getPokemonSkills, getTypesPokemons } from '../../utils/pokemonsData';
 export const ListPokemon: React.FC = () => {
   const { pokemons } = useGetPokemonsData();
 
-  // console.log(pokemons);
   return (
     <div>
       <ul>

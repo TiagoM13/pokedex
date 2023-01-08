@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react';
 
 import axios from 'axios';
 
+import { getPokemonSkills, getTypesPokemons } from '../../utils/pokemonsData';
+
 interface Props {
   data: {
     name: string;
@@ -35,21 +37,7 @@ export const ListPokemon: React.FC = () => {
     getPokemons();
   }, []);
 
-  const typeHandler = (types: any[]) => {
-    if (types[1]) {
-      return `${types[0].type.name} | ${types[1].type.name}`;
-    }
-    return types[0].type.name;
-  };
-
-  const typeAbilities = (abilities: any[]) => {
-    if (abilities[1]) {
-      return `${abilities[0].ability.name} | ${abilities[1].ability.name}`;
-    }
-    return abilities[0].ability.name;
-  };
-
-  console.log(pokemons);
+  // console.log(pokemons);
   return (
     <div>
       <ul>
@@ -58,14 +46,13 @@ export const ListPokemon: React.FC = () => {
             <li key={key}>
               <span>{pokemon.data.name}</span>
               <p># {pokemon.data.order}</p>
-              <p>{typeHandler(pokemon.data.types)}</p>
+              <p>{getTypesPokemons(pokemon.data.types)}</p>
               <img
                 src={pokemon.data.sprites.front_default}
                 alt={`Pokémon - ${pokemon.data.name}`}
                 loading="lazy"
               />
-              <p>{typeAbilities(pokemon.data.abilities)}</p>
-              {/* <span>{pokemon.data.abilities[0].ability.name}</span> */}
+              <p>{getPokemonSkills(pokemon.data.abilities)}</p>
             </li>
           );
         })}

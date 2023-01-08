@@ -1,30 +1,24 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
 
+import CharizardImg from '../../assets/pokemon_images/pokemon_icon_006_00.png';
 import { useGetPokemonsData } from '../../hooks/usePokemons';
 import { getPokemonSkills, getTypesPokemons } from '../../utils/pokemonsData';
+import { PokemonCard } from '../PokemonCard';
 
 export const ListPokemon: React.FC = () => {
-  const { pokemons } = useGetPokemonsData();
+  // const { pokemons } = useGetPokemonsData();
 
   return (
     <div>
       <ul>
-        {pokemons.map((pokemon, key) => {
-          return (
-            <li key={key}>
-              <span>{pokemon.data.name}</span>
-              <p># {pokemon.data.order}</p>
-              <p>{getTypesPokemons(pokemon.data.types)}</p>
-              <img
-                src={pokemon.data.sprites.front_default}
-                alt={`Pokémon - ${pokemon.data.name}`}
-                loading="lazy"
-              />
-              <p>{getPokemonSkills(pokemon.data.abilities)}</p>
-            </li>
-          );
-        })}
+        <PokemonCard
+          order={6}
+          name="Charizard"
+          skills={{ skill_1: 'Soco de Fogo', skill_2: 'Cauda do Dragão' }}
+          types={{ type_1: 'Fogo', type_2: 'Voador' }}
+          url_img={CharizardImg}
+        />
       </ul>
     </div>
   );

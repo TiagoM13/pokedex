@@ -1,8 +1,9 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
 
-import CharizardImg from '../../assets/pokemon_images/pokemon_icon_006_00.png';
+import { POKEMONS } from '../../database/data';
 import { useGetPokemonsData } from '../../hooks/usePokemons';
+import { getColorTypes } from '../../utils/getColorTypes';
 import { getPokemonSkills, getTypesPokemons } from '../../utils/pokemonsData';
 import { PokemonCard } from '../PokemonCard';
 
@@ -12,13 +13,24 @@ export const ListPokemon: React.FC = () => {
   return (
     <div>
       <ul>
-        <PokemonCard
-          order={6}
-          name="Charizard"
-          skills={{ skill_1: 'Soco de Fogo', skill_2: 'Cauda do Dragão' }}
-          types={{ type_1: 'Fogo', type_2: 'Voador' }}
-          url_img={CharizardImg}
-        />
+        {POKEMONS.map((pokemon) => {
+          return (
+            <PokemonCard
+              key={pokemon.order}
+              order={pokemon.order}
+              name={pokemon.name}
+              skills={{
+                skill_1: pokemon.skills.skill_1,
+                skill_2: pokemon.skills.skill_2,
+              }}
+              types={{
+                type_1: pokemon.types.type_1,
+                type_2: pokemon.types.type_2,
+              }}
+              url_img={pokemon.url_img}
+            />
+          );
+        })}
       </ul>
     </div>
   );

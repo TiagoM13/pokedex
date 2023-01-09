@@ -1,5 +1,9 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
+
+import { COLORS } from '../../database/data';
+import { getColorTypes } from '../../utils/getColorTypes';
 
 interface PokemonData {
   order: number;
@@ -23,7 +27,9 @@ export const PokemonCard = ({
   skills,
 }: PokemonData) => {
   return (
-    <li className="w-[260px] flex justify-between rounded-3xl p-2 m-4 text-zinc-300 bg-red-500 hover:bg-red-600 duration-500 hover:shadow-md hover:shadow-slate-400">
+    <li
+      className={`w-[260px] h-[200px] flex justify-between rounded-3xl p-2 m-4 text-white ${types.type_1 ? `bg-[${getColorTypes(types.type_1)}]` : 'bg-zinc-500'} hover:brightness-110 duration-500 hover:shadow-md hover:shadow-slate-400`}
+    >
       <div className="py-2 px-1">
         <div className="flex flex-col">
           <h3 className="font-black">{name}</h3>
@@ -33,16 +39,18 @@ export const PokemonCard = ({
           <span className="bg-black bg-opacity-20 py-2 px-4 mb-1 rounded-lg">
             {types.type_1}
           </span>
-          <span className="bg-black bg-opacity-20 py-2 px-4 mb-1 rounded-lg">
-            {types.type_2}
-          </span>
+          {types.type_2 && (
+            <span className="bg-black bg-opacity-20 py-2 px-4 mb-1 rounded-lg">
+              {types.type_2}
+            </span>
+          )}
         </div>
       </div>
-      <div>
+      <div className="w-[140px] flex items-center justify-center">
         <img
-          className="w-[130px] h-[130px]"
+          className='w-full object-cover m-4'
           src={url_img}
-          alt={`Pokémon - ${name}`}
+          alt={`Pokémon - ${name} `}
           loading="lazy"
         />
       </div>

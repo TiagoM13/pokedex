@@ -2,7 +2,6 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
 
-import { COLORS } from '../../database/data';
 import { getColorTypes } from '../../utils/getColorTypes';
 
 interface PokemonData {
@@ -28,19 +27,19 @@ export const PokemonCard = ({
 }: PokemonData) => {
   return (
     <li
-      className={`w-[260px] h-[200px] flex justify-between rounded-3xl p-2 m-4 text-white ${types.type_1 ? `bg-[${getColorTypes(types.type_1)}]` : 'bg-zinc-500'} hover:brightness-110 duration-500 hover:shadow-md hover:shadow-slate-400`}
+      className={`w-[200px] h-[160px] flex justify-between items-center rounded-3xl p-2 m-1 text-white ${types.type_1 ? `bg-[${getColorTypes(types.type_1)}]` : 'bg-zinc-500'} hover:brightness-110 duration-500 hover:shadow-md hover:shadow-slate-400`}
     >
       <div className="py-2 px-1">
         <div className="flex flex-col">
           <h3 className="font-black">{name}</h3>
-          <span className="font-semibold text-sm">#00{order}</span>
+          <span className="font-semibold text-xs">#00{order}</span>
         </div>
         <div className="flex flex-col max-w-fit pt-2 font-semibold text-xs text-center">
-          <span className="bg-black bg-opacity-20 py-2 px-4 mb-1 rounded-lg">
+          <span className="bg-black bg-opacity-20 py-1 px-2 mb-1 rounded-lg">
             {types.type_1}
           </span>
           {types.type_2 && (
-            <span className="bg-black bg-opacity-20 py-2 px-4 mb-1 rounded-lg">
+            <span className="bg-black bg-opacity-20 py-1 px-2 mb-1 rounded-lg">
               {types.type_2}
             </span>
           )}

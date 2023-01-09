@@ -12,7 +12,7 @@ export const ListPokemon: React.FC = () => {
 
   return (
     <div>
-      <ul>
+      <ul className="grid grid-cols-6 gap-1 justify-items-center">
         {POKEMONS.map((pokemon) => {
           return (
             <PokemonCard

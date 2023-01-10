@@ -3,7 +3,6 @@ import React from 'react';
 
 import { POKEMONS } from '../../database/data';
 import { useGetPokemonsData } from '../../hooks/usePokemons';
-import { getColorTypes } from '../../utils/getColorTypes';
 import { getPokemonSkills, getTypesPokemons } from '../../utils/pokemonsData';
 import { PokemonCard } from '../PokemonCard';
 

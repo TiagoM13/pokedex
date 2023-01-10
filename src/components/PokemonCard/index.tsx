@@ -2,7 +2,7 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
 
-import { getColorTypes } from '../../utils/getColorTypes';
+import { getTypesToColor } from '../../utils/getTypesToColor';
 
 interface PokemonData {
   order: number;
@@ -27,7 +27,7 @@ export const PokemonCard = ({
 }: PokemonData) => {
   return (
     <li
-      className={`w-[200px] h-[160px] flex justify-between items-center rounded-3xl p-2 m-1 text-white ${types.type_1 ? `bg-[${getColorTypes(types.type_1)}]` : 'bg-zinc-500'} hover:brightness-110 duration-500 hover:shadow-md hover:shadow-slate-400`}
+      className={`w-[200px] h-[160px] flex justify-between items-center rounded-3xl p-2 m-1 text-white ${types.type_1 ? `bg-[${getTypesToColor(types.type_1)}]` : 'bg-zinc-500'} hover:brightness-110 duration-500 hover:shadow-md hover:shadow-slate-400`}
     >
       <div className="py-2 px-1">
         <div className="flex flex-col">

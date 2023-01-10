@@ -3,6 +3,7 @@
 import React from 'react';
 
 import { getTypesToColor } from '../../utils/getTypesToColor';
+import { TypeCard } from './TypeCard';
 
 interface PokemonData {
   order: number;
@@ -38,13 +39,9 @@ export const PokemonCard = ({
           <span className="font-semibold text-xs">#00{order}</span>
         </div>
         <div className="flex flex-col max-w-fit pt-2 font-semibold text-xs text-center">
-          <span className="bg-black bg-opacity-20 py-1 px-2 mb-1 rounded-lg">
-            {types.type_1}
-          </span>
+          <TypeCard type={types.type_1} />
           {types.type_2 && (
-            <span className="bg-black bg-opacity-20 py-1 px-2 mb-1 rounded-lg">
-              {types.type_2}
-            </span>
+            <TypeCard type={types.type_2} />
           )}
         </div>
       </div>

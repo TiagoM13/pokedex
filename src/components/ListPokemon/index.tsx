@@ -1,13 +1,13 @@
-/* eslint-disable no-restricted-syntax */
-/* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
 
-import { useGetPokemonsData } from '../../hooks/usePokemons';
+import { Pokemons } from '../../interfaces/pokemons';
 import { PokemonCard } from '../PokemonCard';
 
-export const ListPokemon = () => {
-  const { pokemons } = useGetPokemonsData();
+interface Props {
+  pokemons: Pokemons[];
+}
 
+export const ListPokemon = ({ pokemons }: Props) => {
   return (
     <div>
       <ul className="grid grid-cols-6 gap-1 justify-items-center">

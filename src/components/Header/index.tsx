@@ -6,10 +6,10 @@ import { MagnifyingGlass } from 'phosphor-react';
 import Pokebola from '../../assets/logo/logo_pokebola.png';
 
 interface Props {
-  onFilterPokemon: (e: string) => void;
+  getFilterPokemon: (e: string) => void;
 }
 
-export const Header = ({ onFilterPokemon }: Props) => {
+export const Header = ({ getFilterPokemon }: Props) => {
   const title = 'Pokédex';
 
   return (
@@ -28,7 +28,7 @@ export const Header = ({ onFilterPokemon }: Props) => {
         </div>
         <div className="flex items-center relative">
           <input
-            onChange={(e) => onFilterPokemon(e.target.value)}
+            onChange={(e) => getFilterPokemon(e.target.value)}
             name="Search"
             type="text"
             placeholder="Escolha um pokémon..."

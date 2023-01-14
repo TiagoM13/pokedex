@@ -2,31 +2,17 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
 
+import { IPokemonCard } from '../../interfaces/card';
 import { getNumberOrderFormat } from '../../utils/getNumberOrderFormat';
 import { getTypesToColor } from '../../utils/getTypesToColor';
 import { TypeCard } from './TypeCard';
-
-export interface PokemonData {
-  order: number;
-  name: string;
-  url_img: string;
-  types: {
-    type_1: string;
-    type_2?: string;
-  };
-  skills: {
-    skill_1: string;
-    skill_2: string;
-  };
-}
 
 export const PokemonCard = ({
   name,
   order,
   types,
   url_img,
-  skills,
-}: PokemonData) => {
+}: IPokemonCard) => {
   return (
     <li
       style={{
@@ -50,7 +36,7 @@ export const PokemonCard = ({
         <img
           className='w-full object-cover m-4'
           src={url_img}
-          alt={`Pokémon - ${name} `}
+          alt={`Pokémon - ${name}`}
           loading="lazy"
         />
       </div>

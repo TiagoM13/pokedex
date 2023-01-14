@@ -5,7 +5,7 @@ import { MagnifyingGlass } from 'phosphor-react';
 import Pokebola from '../../assets/logo/logo_pokebola.png';
 
 export const Header: React.FC = () => {
-  const title = 'Pokedex List';
+  const title = 'Pokedex';
 
   return (
     <header className="bg-[#025fca]">
@@ -17,7 +17,7 @@ export const Header: React.FC = () => {
             loading="lazy"
             className="w-[15%] pr-2"
           />
-          <h1 className="text-[#fcefd4] underline font-bold text-3xl text-center">
+          <h1 className="text-[#fcefd4] font-bold text-3xl text-center">
             {title}
           </h1>
         </div>

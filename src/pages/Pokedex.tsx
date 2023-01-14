@@ -3,11 +3,10 @@ import React, { useState } from 'react';
 
 import { Header } from '../components/Header';
 import { ListPokemon } from '../components/ListPokemon';
-import { PokemonData } from '../components/PokemonCard';
 import { POKEMONS } from '../database/data';
 
 const PokedexList: React.FC = () => {
-  const [data, setData] = useState<PokemonData[]>(POKEMONS);
+  const [data, setData] = useState(POKEMONS);
 
   const onFilterPokemon = (name: string) => {
     const filteredPokemons = [];
@@ -24,7 +23,7 @@ const PokedexList: React.FC = () => {
   return (
     <>
       <Header onFilterPokemon={onFilterPokemon} />
-      <ListPokemon data={data} />
+      <ListPokemon />
     </>
   );
 };

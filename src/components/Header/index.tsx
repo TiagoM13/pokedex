@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { MagnifyingGlass } from 'phosphor-react';
+
 import Pokebola from '../../assets/logo/logo_pokebola.png';
 
 export const Header: React.FC = () => {
@@ -19,18 +21,18 @@ export const Header: React.FC = () => {
             {title}
           </h1>
         </div>
-        <div>
+        <div className="flex items-center relative">
           <input
             name="Search"
             type="text"
             placeholder="Escolha um pokémon..."
-            className="placeholder:italic placeholder:text-slate-400 border border-slate-300 bg-zinc-100 rounded-md mx-1 py-1 px-2 shadow-sm focus:outline-none focus:border-zinc-500 focus:ring-1"
+            className="placeholder:italic placeholder:text-slate-400 text-zinc-500 border border-slate-300 bg-zinc-100 rounded-md mx-1 py-1 px-2 shadow-sm focus:outline-none focus:border-zinc-500 focus:ring-1"
           />
           <button
             type="submit"
-            className="bg-white p-2 m-1 font-semibold hover:bg-zinc-200 transition-all text-sm rounded-md"
+            className="px-2 py-1.5 right-1 font-semibold text-sm rounded-md absolute hover:bg-slate-200 transition"
           >
-            Pesquisar
+            <MagnifyingGlass size={20} color="#aaa" weight="bold" />
           </button>
         </div>
       </div>

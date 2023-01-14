@@ -6,7 +6,7 @@ import { getNumberOrderFormat } from '../../utils/getNumberOrderFormat';
 import { getTypesToColor } from '../../utils/getTypesToColor';
 import { TypeCard } from './TypeCard';
 
-interface PokemonData {
+export interface PokemonData {
   order: number;
   name: string;
   url_img: string;

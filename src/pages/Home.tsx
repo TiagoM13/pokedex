@@ -2,7 +2,7 @@ import React from 'react';
 import { CgPokemon } from 'react-icons/cg';
 import { MdCatchingPokemon } from 'react-icons/md';
 
-import img from '../assets/img/charizard.png';
+import img from '../assets/img/Charizard-Pokemon.png';
 
 const Home: React.FC = () => {
   return (
@@ -33,7 +33,7 @@ const Home: React.FC = () => {
         </div>
       </div>
       <div className="flex justify-center items-center">
-        <img src={img} alt="Pikachu" loading="lazy" width="550px" />
+        <img src={img} alt="Pikachu" width={650} loading="lazy" />
       </div>
     </div>
   );

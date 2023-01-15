@@ -1,12 +1,9 @@
 import React from 'react';
 
+import { ITypeCard } from '../../../interfaces/typeCard';
 import { getTypesToColor } from '../../../utils/getTypesToColor';
 
-type TypeCardProps = {
-  type: string;
-};
-
-export const TypeCard = ({ type }: TypeCardProps) => {
+export const TypeCard = ({ type }: ITypeCard) => {
   return (
     <span
       style={{

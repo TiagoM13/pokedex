@@ -1,14 +1,10 @@
 import React from 'react';
 
-import { Pokemons } from '../../interfaces/pokemons';
+import { ListProps } from '../../interfaces/list';
 import { getFirstLetterCapitalized } from '../../utils/getFirstLetterCapitalized';
 import { PokemonCard } from '../PokemonCard';
 
-interface Props {
-  pokemons: Pokemons[];
-}
-
-export const ListPokemon = ({ pokemons }: Props) => {
+export const ListPokemon = ({ pokemons }: ListProps) => {
   return (
     <div>
       <ul className="grid grid-cols-6 gap-1 justify-items-center">

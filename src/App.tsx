@@ -1,9 +1,10 @@
 import React from 'react';
 
-import PokedexList from './pages/Pokedex';
+import Home from './pages/Home';
+// import PokedexList from './pages/Pokedex';
 
 const App = () => {
-  return <PokedexList />;
+  return <Home />;
 };
 
 export default App;

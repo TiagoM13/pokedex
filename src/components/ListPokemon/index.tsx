@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Pokemons } from '../../interfaces/pokemons';
+import { getFirstLetterCapitalized } from '../../utils/getFirstLetterCapitalized';
 import { PokemonCard } from '../PokemonCard';
 
 interface Props {
@@ -16,7 +17,7 @@ export const ListPokemon = ({ pokemons }: Props) => {
             <PokemonCard
               key={pokemon.data.id}
               order={pokemon.data.order}
-              name={pokemon.data.name}
+              name={getFirstLetterCapitalized(pokemon.data.name)}
               skills={{
                 skill_1: pokemon.data.abilities[0]?.ability.name,
                 skill_2: pokemon.data.abilities[1]?.ability.name,

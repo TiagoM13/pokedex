@@ -17,9 +17,7 @@ export const PokemonCard = ({ name, order, types, url_img }: IPokemonCard) => {
     >
       <div className="py-2 px-1">
         <div className="flex flex-col">
-          <h3 className="font-black line-clamp-1 text-sm">
-            {`${name[0].toUpperCase() + name.substring(1)}`}
-          </h3>
+          <h3 className="font-black line-clamp-1 text-sm">{name}</h3>
           <span className="font-semibold text-sm">
             {getNumberOrderFormat(order)}
           </span>

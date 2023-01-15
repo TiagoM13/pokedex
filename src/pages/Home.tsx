@@ -2,11 +2,13 @@ import React from 'react';
 import { CgPokemon } from 'react-icons/cg';
 import { MdCatchingPokemon } from 'react-icons/md';
 
+import { GithubLogo, LinkedinLogo, TwitterLogo } from 'phosphor-react';
+
 import img from '../assets/img/Charizard-Pokemon.png';
 
 const Home: React.FC = () => {
   return (
-    <div className="bg-orange w-screen h-screen flex justify-between p-8">
+    <div className="bg-orange w-screen h-screen flex justify-between p-8 relative">
       <div className="flex flex-col justify-center">
         <div className="bg-white p-2 mb-8 mr-auto rounded-xl">
           <MdCatchingPokemon size={40} color="#fe6613" />
@@ -30,6 +32,33 @@ const Home: React.FC = () => {
             <CgPokemon size={20} className="mr-2" />
             Get list pokémon
           </button>
+        </div>
+
+        <div className="flex absolute bottom-5">
+          <a
+            href="https://github.com/TiagoM13"
+            target="_blank"
+            className="p-1 mr-2 hover:scale-105 transition duration-200 border-2 rounded-[50%]"
+            rel="noreferrer"
+          >
+            <GithubLogo size={25} weight="bold" color="white" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/tiago-mota-4690591a8/"
+            target="_blank"
+            className="p-1 mr-2 hover:scale-105 transition duration-200 border-2 rounded-[50%]"
+            rel="noreferrer"
+          >
+            <LinkedinLogo size={25} weight="bold" color="white" />
+          </a>
+          <a
+            href="https://twitter.com/tiago_m13"
+            target="_blank"
+            className="p-1 mr-2 hover:scale-105 transition duration-200 border-2 rounded-[50%]"
+            rel="noreferrer"
+          >
+            <TwitterLogo size={25} weight="bold" color="white" />
+          </a>
         </div>
       </div>
       <div className="flex justify-center items-center">

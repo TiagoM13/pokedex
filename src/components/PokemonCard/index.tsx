@@ -2,10 +2,11 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
 
+import { getNumberOrderFormat } from '../../utils/getNumberOrderFormat';
 import { getTypesToColor } from '../../utils/getTypesToColor';
 import { TypeCard } from './TypeCard';
 
-interface PokemonData {
+export interface PokemonData {
   order: number;
   name: string;
   url_img: string;
@@ -36,7 +37,7 @@ export const PokemonCard = ({
       <div className="py-2 px-1">
         <div className="flex flex-col">
           <h3 className="font-black">{name}</h3>
-          <span className="font-semibold text-xs">#00{order}</span>
+          <span className="font-semibold text-xs">{getNumberOrderFormat(order)}</span>
         </div>
         <div className="flex flex-col max-w-fit pt-2 font-semibold text-xs text-center">
           <TypeCard type={types.type_1} />

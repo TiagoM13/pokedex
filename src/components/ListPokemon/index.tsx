@@ -1,18 +1,21 @@
+/* eslint-disable no-restricted-syntax */
 /* eslint-disable react/jsx-one-expression-per-line */
-import React from 'react';
+import React, { useState } from 'react';
 
 import { POKEMONS } from '../../database/data';
-import { useGetPokemonsData } from '../../hooks/usePokemons';
+import { Pokemons } from '../../interfaces/pokemons';
 import { getPokemonSkills, getTypesPokemons } from '../../utils/pokemonsData';
-import { PokemonCard } from '../PokemonCard';
+import { PokemonCard, PokemonData } from '../PokemonCard';
 
-export const ListPokemon: React.FC = () => {
-  // const { pokemons } = useGetPokemonsData();
+interface Props {
+  data: PokemonData[];
+}
 
+export const ListPokemon = ({ data }: Props) => {
   return (
     <div>
       <ul className="grid grid-cols-6 gap-1 justify-items-center">
-        {POKEMONS.map((pokemon) => {
+        {data.map((pokemon) => {
           return (
             <PokemonCard
               key={pokemon.order}

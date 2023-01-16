@@ -113,7 +113,7 @@ export const POKEMONS = [
   },
   {
     order: 15,
-    name: 'Bidreel',
+    name: 'Beedrill',
     url_img: '/src/assets/pokemon_images/pokemon_icon_015_00.png',
     types: {
       type_1: 'Inseto',
@@ -122,6 +122,30 @@ export const POKEMONS = [
     skills: {
       skill_1: 'Picada',
       skill_2: 'Ferrão Letal',
+    },
+  },
+  {
+    order: 25,
+    name: 'Pikachu',
+    url_img: '/src/assets/pokemon_images/pokemon_icon_025_01.png',
+    types: {
+      type_1: 'Elétrico',
+    },
+    skills: {
+      skill_1: 'Choque do trovão',
+      skill_2: 'Cauda de ferro',
+    },
+  },
+  {
+    order: 68,
+    name: 'Machamp',
+    url_img: '/src/assets/pokemon_images/pokemon_icon_068_00.png',
+    types: {
+      type_1: 'Lutador',
+    },
+    skills: {
+      skill_1: 'Soco empoderador',
+      skill_2: 'Suco dinâmico',
     },
   },
 ];

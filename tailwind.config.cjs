@@ -6,7 +6,11 @@ module.exports = {
     fontFamily: {
       sans: ['Inter', 'sans-serif'],
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        orange: "url('./src/assets/background/background_orange.png')",
+      },
+    },
   },
   plugins: [require('@tailwindcss/line-clamp')],
 };

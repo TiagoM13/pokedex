@@ -1,35 +1,28 @@
-/* eslint-disable no-restricted-syntax */
-/* eslint-disable react/jsx-one-expression-per-line */
-import React, { useState } from 'react';
+import React from 'react';
 
-import { POKEMONS } from '../../database/data';
-import { Pokemons } from '../../interfaces/pokemons';
-import { getPokemonSkills, getTypesPokemons } from '../../utils/pokemonsData';
-import { PokemonCard, PokemonData } from '../PokemonCard';
+import { ListProps } from '../../interfaces/list';
+import { getFirstLetterCapitalized } from '../../utils/getFirstLetterCapitalized';
+import { PokemonCard } from '../PokemonCard';
 
-interface Props {
-  data: PokemonData[];
-}
-
-export const ListPokemon = ({ data }: Props) => {
+export const ListPokemon = ({ pokemons }: ListProps) => {
   return (
     <div>
       <ul className="grid grid-cols-6 gap-1 justify-items-center">
-        {data.map((pokemon) => {
+        {pokemons.map((pokemon) => {
           return (
             <PokemonCard
-              key={pokemon.order}
-              order={pokemon.order}
-              name={pokemon.name}
+              key={pokemon.data.id}
+              order={pokemon.data.order}
+              name={getFirstLetterCapitalized(pokemon.data.name)}
               skills={{
-                skill_1: pokemon.skills.skill_1,
-                skill_2: pokemon.skills.skill_2,
+                skill_1: pokemon.data.abilities[0]?.ability.name,
+                skill_2: pokemon.data.abilities[1]?.ability.name,
               }}
               types={{
-                type_1: pokemon.types.type_1,
-                type_2: pokemon.types.type_2,
+                type_1: pokemon.data.types[0].type.name,
+                type_2: pokemon.data.types[1]?.type.name,
               }}
-              url_img={pokemon.url_img}
+              url_img={pokemon.data.sprites.front_default}
             />
           );
         })}

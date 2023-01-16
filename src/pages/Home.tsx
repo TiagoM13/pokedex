@@ -1,19 +1,28 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { CgPokemon } from 'react-icons/cg';
 import { MdCatchingPokemon } from 'react-icons/md';
 
 import { GithubLogo, LinkedinLogo, TwitterLogo } from 'phosphor-react';
 
 import img from '../assets/img/Charizard-Pokemon.png';
+import { Anchor } from '../components/Anchor/Anchor';
 
 const Home: React.FC = () => {
   return (
     <div className="bg-orange w-screen h-screen flex justify-between p-8 relative">
+      <Helmet>
+        <meta name="description" content="Pokemon list app" />
+        <link rel="icon" href="/public/pokemon_favicon.svg" type="image/svg" />
+
+        <title>Home - Pokédex ReactJs</title>
+      </Helmet>
+
       <div className="flex flex-col justify-center">
         <div className="bg-white p-2 mb-8 mr-auto rounded-xl">
           <MdCatchingPokemon size={40} color="#fe6613" />
         </div>
-        <div className="text-white p-">
+        <div className="text-white">
           <h1 className="text-4xl font-bold">
             <span className="text-6xl">Pokédex</span>
             <br />
@@ -35,32 +44,18 @@ const Home: React.FC = () => {
         </div>
 
         <div className="flex absolute bottom-5">
-          <a
-            href="https://github.com/TiagoM13"
-            target="_blank"
-            className="p-1 mr-2 hover:scale-105 transition duration-200 border-2 rounded-[50%]"
-            rel="noreferrer"
-          >
-            <GithubLogo size={25} weight="bold" color="white" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/tiago-mota-4690591a8/"
-            target="_blank"
-            className="p-1 mr-2 hover:scale-105 transition duration-200 border-2 rounded-[50%]"
-            rel="noreferrer"
-          >
-            <LinkedinLogo size={25} weight="bold" color="white" />
-          </a>
-          <a
-            href="https://twitter.com/tiago_m13"
-            target="_blank"
-            className="p-1 mr-2 hover:scale-105 transition duration-200 border-2 rounded-[50%]"
-            rel="noreferrer"
-          >
-            <TwitterLogo size={25} weight="bold" color="white" />
-          </a>
+          <Anchor url="https://github.com/TiagoM13">
+            <GithubLogo size={25} weight="bold" color="#FFF" />
+          </Anchor>
+          <Anchor url="https://www.linkedin.com/in/tiago-mota-4690591a8/">
+            <LinkedinLogo size={25} weight="bold" color="#FFF" />
+          </Anchor>
+          <Anchor url="https://twitter.com/tiago_m13">
+            <TwitterLogo size={25} weight="bold" color="#FFF" />
+          </Anchor>
         </div>
       </div>
+
       <div className="flex justify-center items-center">
         <img src={img} alt="Pikachu" width={650} loading="lazy" />
       </div>

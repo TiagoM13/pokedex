@@ -54,6 +54,7 @@
     "phosphor-react": "^1.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
     "react-icons": "^4.7.1"
   },
   "devDependencies": {
@@ -64,6 +65,7 @@
     "@types/node": "^14.14.35",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",
+    "@types/react-helmet": "^6.1.6",
     "@typescript-eslint/eslint-plugin": "^4.5.0",
     "@typescript-eslint/parser": "^4.5.0",
     "@vitejs/plugin-react": "^3.0.0",

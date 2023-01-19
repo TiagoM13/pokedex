@@ -30,7 +30,7 @@ export const Header = ({ getFilterPokemon }: IHeader) => {
             onChange={(e) => getFilterPokemon(e.target.value)}
             name="Search"
             type="text"
-            placeholder="Escolha um pokémon..."
+            placeholder="Search pokemons..."
             className="placeholder:italic placeholder:text-slate-400 text-zinc-500 border border-slate-300 bg-zinc-100 rounded-md mx-1 py-1 px-2 shadow-sm focus:outline-none focus:border-zinc-500 focus:ring-1"
           />
           <button

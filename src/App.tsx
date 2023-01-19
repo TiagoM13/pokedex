@@ -1,10 +1,9 @@
 import React from 'react';
 
-import Home from './pages/Home';
-import PokedexList from './pages/Pokedex';
+import { AppRoute } from './routes/app_route';
 
 const App = () => {
-  return <Home />;
+  return <AppRoute />;
 };
 
 export default App;

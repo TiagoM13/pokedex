@@ -17,7 +17,7 @@ const Home: React.FC = () => {
         <meta name="description" content="Pokemon list app" />
         <link rel="icon" href="/public/pokemon_favicon.svg" type="image/svg" />
 
-        <title>Home - Pokédex ReactJs</title>
+        <title>Home - Pokédex</title>
       </Helmet>
 
       <div className="flex flex-col justify-center">

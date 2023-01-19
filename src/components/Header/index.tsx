@@ -1,26 +1,30 @@
 /* eslint-disable no-restricted-syntax */
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { MagnifyingGlass } from 'phosphor-react';
 
 import Pokebola from '../../assets/logo/logo_pokebola.png';
 import { IHeader } from '../../interfaces/header';
+import { paths } from '../../routes/app_route';
 
 export const Header = ({ getFilterPokemon }: IHeader) => {
   return (
     <header className="bg-[#025fca]">
       <div className="flex justify-between items-center py-6 px-1 mx-4 mb-2">
-        <div className="flex items-center">
-          <img
-            src={Pokebola}
-            alt="Pokebola"
-            loading="lazy"
-            className="w-[15%] pr-2"
-          />
-          <h1 className="text-[#fcefd4] font-bold text-3xl text-center">
-            Pokédex
-          </h1>
-        </div>
+        <Link to={paths.HOME} reloadDocument>
+          <div className="flex items-center">
+            <img
+              src={Pokebola}
+              alt="Pokebola"
+              loading="lazy"
+              className="w-[15%] pr-2"
+            />
+            <h1 className="text-[#fcefd4] font-bold text-3xl text-center">
+              Pokédex
+            </h1>
+          </div>
+        </Link>
         <div className="flex items-center relative">
           <input
             onChange={(e) => getFilterPokemon(e.target.value)}

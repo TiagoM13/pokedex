@@ -2,11 +2,13 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { CgPokemon } from 'react-icons/cg';
 import { MdCatchingPokemon } from 'react-icons/md';
+import { Link } from 'react-router-dom';
 
 import { GithubLogo, LinkedinLogo, TwitterLogo } from 'phosphor-react';
 
 import img from '../assets/img/Charizard-Pokemon.png';
 import { Anchor } from '../components/Anchor/Anchor';
+import { paths } from '../routes/app_route';
 
 const Home: React.FC = () => {
   return (
@@ -34,13 +36,15 @@ const Home: React.FC = () => {
         </div>
 
         <div className="py-4 my-4">
-          <button
-            type="button"
-            className="flex items-center justify-between bg-yellow-400 p-3 font-bold rounded-md hover:bg-zinc-100  transition duration-500 drop-shadow-2xl shadow-black"
-          >
-            <CgPokemon size={20} className="mr-2" />
-            Get list pokémon
-          </button>
+          <Link to={paths.POKEDEX} reloadDocument>
+            <button
+              type="button"
+              className="flex items-center justify-between bg-yellow-400 p-3 font-bold rounded-md hover:bg-zinc-100  transition duration-500 drop-shadow-2xl shadow-black"
+            >
+              <CgPokemon size={20} className="mr-2" />
+              Get list pokémon
+            </button>
+          </Link>
         </div>
 
         <div className="flex absolute bottom-5">

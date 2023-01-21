@@ -32,7 +32,7 @@ export const useGetPokemonsData = () => {
     }
 
     for (const i in pokemons) {
-      if (pokemons[i].data.name.includes(name)) {
+      if (pokemons[i].data.name.includes(name.toLocaleLowerCase())) {
         filteredPokemons.push(pokemons[i]);
       }
     }

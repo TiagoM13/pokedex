@@ -16,7 +16,7 @@ export const useGetPokemonsData = () => {
     const endpoints = [];
 
     for (let i = 1; i <= 151; i++) {
-      endpoints.push(`https://pokeapi.co/api/v2/pokemon/${i}/`);
+      endpoints.push(`${import.meta.env.VITE_URL_API}/${i}`);
     }
 
     await axios

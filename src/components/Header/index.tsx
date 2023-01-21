@@ -1,5 +1,5 @@
 /* eslint-disable no-restricted-syntax */
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { MagnifyingGlass } from 'phosphor-react';
@@ -9,6 +9,12 @@ import { IHeader } from '../../interfaces/header';
 import { paths } from '../../routes/app_route';
 
 export const Header = ({ getFilterPokemon }: IHeader) => {
+  const [isPlaceholder, setIsPlaceholder] = useState(false);
+
+  const onSearchPlaceholder = () => {
+    setIsPlaceholder(!isPlaceholder);
+  };
+
   return (
     <header className="bg-[#025fca]">
       <div className="flex justify-between items-center py-6 px-1 mx-4 mb-2">
@@ -28,9 +34,11 @@ export const Header = ({ getFilterPokemon }: IHeader) => {
         <div className="flex items-center relative">
           <input
             onChange={(e) => getFilterPokemon(e.target.value)}
+            onFocus={onSearchPlaceholder}
+            onBlur={onSearchPlaceholder}
             name="Search"
             type="text"
-            placeholder="Search pokemons..."
+            placeholder={isPlaceholder ? '' : 'Search pokemons...'}
             className="placeholder:italic placeholder:text-slate-400 text-zinc-500 border border-slate-300 bg-zinc-100 rounded-md mx-1 py-1 px-2 shadow-sm focus:outline-none focus:border-zinc-500 focus:ring-1"
           />
           <button

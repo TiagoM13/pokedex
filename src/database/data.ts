@@ -68,7 +68,7 @@ export const POKEMONS = [
     url_img: '/src/assets/pokemon_images/pokemon_icon_006_00.png',
     types: {
       type_1: 'fire',
-      type_2: 'Voador',
+      type_2: 'flying',
     },
     skills: {
       skill_1: 'Soco de fogo',

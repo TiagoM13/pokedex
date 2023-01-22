@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { ITypeCard } from '../../../interfaces/typeCard';
-import { getTypesToColor } from '../../../utils/getTypesToColor';
+import { getTypesToColor } from '../../../utils/getColors';
 
 export const TypeCard = ({ type }: ITypeCard) => {
   return (

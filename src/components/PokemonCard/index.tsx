@@ -22,12 +22,12 @@ export const PokemonCard = ({ name, order, types, url_img }: IPokemonCard) => {
             {getNumberOrderFormat(order)}
           </span>
         </div>
-        <div className="flex flex-col justify-end max-w-fit pt-2 font-semibold text-xs text-center">
+        <div className="pt-2 font-semibold text-[10px]">
           <TypeCard type={types.type_1} />
           {types.type_2 && <TypeCard type={types.type_2} />}
         </div>
       </div>
-      <div className="w-[140px] flex items-center">
+      <div className="flex items-center">
         <img
           className="w-full object-cover"
           src={url_img}

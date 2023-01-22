@@ -1,19 +1,27 @@
 import React from 'react';
 
+import TypeImage from '../../../assets/types_svg/fire.svg';
 import { ITypeCard } from '../../../interfaces/typeCard';
 import { getTypesToColor } from '../../../utils/getColors';
 
 export const TypeCard = ({ type }: ITypeCard) => {
   return (
-    <span
+    <div
       style={{
         backgroundColor: type.toUpperCase()
           ? getTypesToColor(type.toUpperCase())
           : 'bg-black',
       }}
-      className="bg-opacity-20 py-1 px-2 mb-1 rounded-lg border border-zinc-100"
+      className="flex justify-between items-center w-max py-1 px-2 mb-1 rounded-lg border border-zinc-100"
     >
-      {type.toUpperCase()}
-    </span>
+      <img
+        src={TypeImage}
+        alt="type pokémon"
+        width="12px"
+        className="mr-1"
+        loading="lazy"
+      />
+      <span>{type.toUpperCase()}</span>
+    </div>
   );
 };

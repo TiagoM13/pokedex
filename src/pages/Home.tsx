@@ -12,7 +12,7 @@ import { paths } from '../routes/app_route';
 
 const Home: React.FC = () => {
   return (
-    <div className="bg-orange w-screen h-screen flex justify-between p-8 relative">
+    <div className="bg-orange bg-no-repeat bg-cover w-screen h-screen flex justify-between p-8 relative">
       <Helmet>
         <meta name="description" content="Pokemon list app" />
         <link rel="icon" href="/public/pokemon_favicon.svg" type="image/svg" />

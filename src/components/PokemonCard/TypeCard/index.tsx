@@ -7,7 +7,7 @@ export const TypeCard = ({ type, icon }: ITypeCard) => {
   return (
     <div
       style={{
-        backgroundColor: type.toUpperCase()
+        backgroundColor: type
           ? getTypesToColor(type.toUpperCase())
           : 'bg-black',
       }}

@@ -13,7 +13,7 @@ export const PokemonCard = ({ name, order, types, url_img }: IPokemonCard) => {
   return (
     <li
       style={{
-        backgroundColor: types.type_1.toUpperCase()
+        backgroundColor: types.type_1
           ? getTypesToBackgroundColor(types.type_1.toUpperCase())
           : '#121212',
       }}
@@ -28,14 +28,14 @@ export const PokemonCard = ({ name, order, types, url_img }: IPokemonCard) => {
         </div>
         <div className="pt-2 font-semibold text-[10px]">
           <TypeCard
-            icon={`${types.type_1.toUpperCase()
+            icon={`${types.type_1
               ? getTypesToIconsTypes(types.type_1.toUpperCase())
               : ''
               }`}
             type={types.type_1}
           />
           {types.type_2 && <TypeCard
-            icon={`${types.type_2.toUpperCase()
+            icon={`${types.type_2
               ? getTypesToIconsTypes(types.type_2.toUpperCase())
               : ''
               }`}

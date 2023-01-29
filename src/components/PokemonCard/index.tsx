@@ -17,7 +17,7 @@ export const PokemonCard = ({ name, order, types, url_img }: IPokemonCard) => {
           ? getTypesToBackgroundColor(types.type_1.toUpperCase())
           : '#121212',
       }}
-      className="w-[200px] h-[160px] flex justify-between rounded-3xl p-2 m-1 text-white duration-500  cursor-pointer hover:shadow-md hover:shadow-slate-400 hover:brightness-100 hover:-translate-y-1"
+      className="w-[200px] h-[160px] flex justify-between rounded-3xl p-2 m-1 text-white duration-500  cursor-pointer hover:shadow-md hover:shadow-slate-400 hover:brightness-100 hover:-translate-y-1 animate-reveal"
     >
       <div className="py-4 px-1">
         <div className="flex flex-col">

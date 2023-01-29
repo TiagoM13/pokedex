@@ -1,15 +1,19 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
 
 import { IPokemonCard } from '../../interfaces/card';
-import { getTypesToBackgroundColor } from '../../utils/getColors';
 import { getNumberOrderFormat } from '../../utils/getNumberOrderFormat';
+import {
+  getTypesToBackgroundColor,
+  getTypesToIconsTypes,
+} from '../../utils/getTheme';
 import { TypeCard } from './TypeCard';
 
 export const PokemonCard = ({ name, order, types, url_img }: IPokemonCard) => {
   return (
     <li
       style={{
-        backgroundColor: types.type_1.toUpperCase()
+        backgroundColor: types.type_1
           ? getTypesToBackgroundColor(types.type_1.toUpperCase())
           : '#121212',
       }}
@@ -23,8 +27,20 @@ export const PokemonCard = ({ name, order, types, url_img }: IPokemonCard) => {
           </span>
         </div>
         <div className="pt-2 font-semibold text-[10px]">
-          <TypeCard type={types.type_1} />
-          {types.type_2 && <TypeCard type={types.type_2} />}
+          <TypeCard
+            icon={`${types.type_1
+              ? getTypesToIconsTypes(types.type_1.toUpperCase())
+              : ''
+              }`}
+            type={types.type_1}
+          />
+          {types.type_2 && <TypeCard
+            icon={`${types.type_2
+              ? getTypesToIconsTypes(types.type_2.toUpperCase())
+              : ''
+              }`}
+            type={types.type_2}
+          />}
         </div>
       </div>
       <div className="flex items-center">

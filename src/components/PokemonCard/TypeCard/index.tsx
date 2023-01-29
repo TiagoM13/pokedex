@@ -1,10 +1,9 @@
 import React from 'react';
 
-import TypeImage from '../../../assets/types_svg/fire.svg';
 import { ITypeCard } from '../../../interfaces/typeCard';
 import { getTypesToColor } from '../../../utils/getColors';
 
-export const TypeCard = ({ type }: ITypeCard) => {
+export const TypeCard = ({ type, icon }: ITypeCard) => {
   return (
     <div
       style={{
@@ -15,8 +14,8 @@ export const TypeCard = ({ type }: ITypeCard) => {
       className="flex justify-between items-center w-max py-1 px-2 mb-1 rounded-lg border border-zinc-100"
     >
       <img
-        src={TypeImage}
-        alt="type pokémon"
+        src={icon}
+        alt={`Type ${type}`}
         width="12px"
         className="mr-1"
         loading="lazy"

@@ -148,3 +148,77 @@ export const getTypesToBackgroundColor = (type: string) => {
     return THEME.BACKGROUND.STEEL;
   }
 };
+
+export const getTypesToIconsTypes = (type: string) => {
+  if (type === THEME.TYPES.GRASS) {
+    return THEME.ICONS.GRASS;
+  }
+
+  if (type === THEME.TYPES.FIRE) {
+    return THEME.ICONS.FIRE;
+  }
+
+  if (type === THEME.TYPES.WATER) {
+    return THEME.ICONS.WATER;
+  }
+
+  if (type === THEME.TYPES.BUG) {
+    return THEME.ICONS.BUG;
+  }
+
+  if (type === THEME.TYPES.FLYING) {
+    return THEME.ICONS.FLYING;
+  }
+
+  if (type === THEME.TYPES.DARK) {
+    return THEME.ICONS.DARK;
+  }
+
+  if (type === THEME.TYPES.DRAGON) {
+    return THEME.ICONS.DRAGON;
+  }
+
+  if (type === THEME.TYPES.ELECTRIC) {
+    return THEME.ICONS.ELECTRIC;
+  }
+
+  if (type === THEME.TYPES.FAIRY) {
+    return THEME.ICONS.FAIRY;
+  }
+
+  if (type === THEME.TYPES.FIGHTING) {
+    return THEME.ICONS.FIGHTING;
+  }
+
+  if (type === THEME.TYPES.GHOST) {
+    return THEME.ICONS.GHOST;
+  }
+
+  if (type === THEME.TYPES.GROUND) {
+    return THEME.ICONS.GROUND;
+  }
+
+  if (type === THEME.TYPES.ICE) {
+    return THEME.ICONS.ICE;
+  }
+
+  if (type === THEME.TYPES.NORMAL) {
+    return THEME.ICONS.NORMAL;
+  }
+
+  if (type === THEME.TYPES.POISON) {
+    return THEME.ICONS.POISON;
+  }
+
+  if (type === THEME.TYPES.PSYCHIC) {
+    return THEME.ICONS.PSYCHIC;
+  }
+
+  if (type === THEME.TYPES.ROCK) {
+    return THEME.ICONS.ROCK;
+  }
+
+  if (type === THEME.TYPES.STEEL) {
+    return THEME.ICONS.STEEL;
+  }
+};

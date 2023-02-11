@@ -1,19 +1,20 @@
 import React from 'react';
 
 import { ITypeCard } from '../../../interfaces/typeCard';
-import { getTypesToColor } from '../../../utils/getTypesToColor';
+import { getTypesToColor } from '../../../utils/getTheme';
 
-export const TypeCard = ({ type }: ITypeCard) => {
+export const TypeCard = ({ type, icon }: ITypeCard) => {
   return (
-    <span
+    <div
       style={{
-        backgroundColor: type.toUpperCase()
+        backgroundColor: type
           ? getTypesToColor(type.toUpperCase())
           : 'bg-black',
       }}
-      className="bg-opacity-20 py-1 px-2 mb-1 rounded-lg border border-zinc-100"
+      className="flex justify-between items-center w-max py-1 px-2 mb-1 rounded-lg border border-zinc-100"
     >
-      {type.toUpperCase()}
-    </span>
+      <img src={icon} alt={`Type ${type}`} width="12px" className="mr-1" />
+      <span>{type.toUpperCase()}</span>
+    </div>
   );
 };

@@ -6,10 +6,12 @@ import axios from 'axios';
 import { Pokemons } from '../interfaces/pokemons';
 
 export const useGetPokemonsData = () => {
+  const [loading, setLoading] = useState(false);
   const [pokemons, setPokemons] = useState<Pokemons[]>([]);
 
   useEffect(() => {
-    getPokemons();
+    setLoading(true);
+    getPokemons().finally(() => setLoading(false));
   }, []);
 
   const getPokemons = async () => {
@@ -40,5 +42,5 @@ export const useGetPokemonsData = () => {
     return setPokemons(filteredPokemons);
   };
 
-  return { pokemons, FilterPokemon };
+  return { pokemons, loading, FilterPokemon };
 };

@@ -22,7 +22,7 @@ export const PokemonCard = ({ name, order, types, url_img }: IPokemonCard) => {
       <div className="py-4 px-1">
         <div className="flex flex-col">
           <h3 className="font-black line-clamp-1 text-sm">{name}</h3>
-          <span className="font-semibold text-sm">
+          <span className="font-semibold text-xs">
             {getNumberOrderFormat(order)}
           </span>
         </div>
@@ -43,9 +43,9 @@ export const PokemonCard = ({ name, order, types, url_img }: IPokemonCard) => {
           />}
         </div>
       </div>
-      <div className="flex items-center">
+      <div className="flex items-center h-full w-full">
         <img
-          className="w-full object-cover"
+          className="w-full max-w-full h-full object-cotain overflow-hidden"
           src={url_img}
           alt={`Pokémon - ${name}`}
           loading="lazy"

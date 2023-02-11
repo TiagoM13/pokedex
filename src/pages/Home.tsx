@@ -61,7 +61,7 @@ const Home: React.FC = () => {
       </div>
 
       <div className="flex justify-center items-center">
-        <img src={img} alt="Pikachu" width={650} loading="lazy" />
+        <img src={img} alt="Charizard" width={650} loading="eager" />
       </div>
     </div>
   );

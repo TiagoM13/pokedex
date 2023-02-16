@@ -1,13 +1,20 @@
 import React from 'react';
 
+import { usePagination } from '../../hooks/usePagination';
 import { useGetPokemonsData } from '../../hooks/usePokemons';
 import { ListProps } from '../../interfaces/list';
+import { Pokemons } from '../../interfaces/pokemons';
 import { getFirstLetterCapitalized } from '../../utils/getFirstLetterCapitalized';
 import { Loading } from '../Loading/Loading';
 import { PokemonCard } from '../PokemonCard';
 
-export const ListPokemon = ({ pokemons }: ListProps) => {
+export const ListPokemon = ({ data }: ListProps) => {
   const { loading } = useGetPokemonsData();
+  const itemsPerPage = 20;
+  const { currentItems, showMoreItems } = usePagination<Pokemons>({
+    data,
+    itemsPerPage,
+  });
 
   return (
     <div>
@@ -17,7 +24,7 @@ export const ListPokemon = ({ pokemons }: ListProps) => {
         </div>
       ) : (
         <ul className="grid grid-cols-6 gap-1 justify-items-center">
-          {pokemons.map((pokemon) => {
+          {currentItems.map((pokemon) => {
             return (
               <PokemonCard
                 key={pokemon.data.order}
@@ -35,6 +42,12 @@ export const ListPokemon = ({ pokemons }: ListProps) => {
               />
             );
           })}
+
+          {currentItems.length < data.length && (
+            <button type="button" onClick={showMoreItems}>
+              Mostrar mais
+            </button>
+          )}
         </ul>
       )}
     </div>

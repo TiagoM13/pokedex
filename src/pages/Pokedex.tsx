@@ -10,7 +10,7 @@ const PokedexList: React.FC = () => {
   return (
     <>
       <Header getFilterPokemon={FilterPokemon} />
-      <ListPokemon pokemons={pokemons} />
+      <ListPokemon data={pokemons} />
     </>
   );
 };

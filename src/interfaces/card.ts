@@ -6,8 +6,8 @@ export interface IPokemonCard {
     type_1: string;
     type_2?: string;
   };
-  skills: {
-    skill_1: string;
-    skill_2: string;
+  abilities: {
+    ability_1: string;
+    ability_2: string;
   };
 }

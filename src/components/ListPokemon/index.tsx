@@ -1,4 +1,5 @@
 import React from 'react';
+import { MdOutlineCatchingPokemon } from 'react-icons/md';
 
 import { usePagination } from '../../hooks/usePagination';
 import { useGetPokemonsData } from '../../hooks/usePokemons';
@@ -42,13 +43,18 @@ export const ListPokemon = ({ data }: ListProps) => {
               />
             );
           })}
-
-          {currentItems.length < data.length && (
-            <button type="button" onClick={showMoreItems}>
-              Mostrar mais
-            </button>
-          )}
         </ul>
+      )}
+
+      {currentItems.length < data.length && (
+        <button
+          className="flex gap-2 items-center mx-auto bg-blue-700 py-2 px-4 my-4 text-white text-base border-none  rounded-lg hover:brightness-90 hover:scale-105 transition-all"
+          type="button"
+          onClick={showMoreItems}
+        >
+          <MdOutlineCatchingPokemon size={25} className="text-white" />
+          Show more pokemons
+        </button>
       )}
     </div>
   );

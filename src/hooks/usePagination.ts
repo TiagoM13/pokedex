@@ -1,15 +1,6 @@
 import { useEffect, useState } from 'react';
 
-interface IPagination<T> {
-  data: T[];
-  itemsPerPage: number;
-}
-
-interface IPaginationReturn<T> {
-  currentItems: T[];
-  totalPages: number;
-  showMoreItems: () => void;
-}
+import { IPagination, IPaginationReturn } from '../interfaces/pagination';
 
 export const usePagination = <T>({
   data,

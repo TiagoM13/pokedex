@@ -13,10 +13,6 @@ export const usePagination = <T>({
     setTotalPages(Math.ceil(data.length / currentItemsCount));
   }, [data, currentItemsCount]);
 
-  useEffect(() => {
-    setTotalPages(Math.ceil(data.length / currentItemsCount));
-  }, [data, currentItemsCount]);
-
   const currentItems = data.slice(0, currentItemsCount);
 
   function showMoreItems() {

@@ -30,9 +30,9 @@ export const ListPokemon = ({ data }: ListProps) => {
                 key={pokemon.data.order}
                 order={pokemon.data.order}
                 name={getFirstLetterCapitalized(pokemon.data.name)}
-                skills={{
-                  skill_1: pokemon.data.abilities[0]?.ability.name,
-                  skill_2: pokemon.data.abilities[1]?.ability.name,
+                abilities={{
+                  ability_1: pokemon.data.abilities[0]?.ability.name,
+                  ability_2: pokemon.data.abilities[1]?.ability.name,
                 }}
                 types={{
                   type_1: pokemon.data.types[0].type.name,

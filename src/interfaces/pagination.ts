@@ -7,4 +7,5 @@ export interface IPaginationReturn<T> {
   currentItems: T[];
   totalPages: number;
   showMoreItems: () => void;
+  loadItems: boolean;
 }

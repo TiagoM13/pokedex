@@ -6,6 +6,7 @@ export const usePagination = <T>({
   data,
   itemsPerPage,
 }: IPagination<T>): IPaginationReturn<T> => {
+  const [loadItems, setLoadItems] = useState(false);
   const [totalPages, setTotalPages] = useState(1);
   const [currentItemsCount, setCurrentItemsCount] = useState(itemsPerPage);
 
@@ -16,12 +17,17 @@ export const usePagination = <T>({
   const currentItems = data.slice(0, currentItemsCount);
 
   function showMoreItems() {
-    setCurrentItemsCount((count) => count + itemsPerPage);
+    setLoadItems(true);
+    setTimeout(() => {
+      setCurrentItemsCount((count) => count + itemsPerPage);
+      setLoadItems(false);
+    }, 1000);
   }
 
   return {
     currentItems,
     totalPages,
     showMoreItems,
+    loadItems,
   };
 };

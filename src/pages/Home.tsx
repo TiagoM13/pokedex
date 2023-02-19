@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import { CgPokemon } from 'react-icons/cg';
 import { MdCatchingPokemon } from 'react-icons/md';
 import { Link } from 'react-router-dom';
@@ -10,13 +9,6 @@ import { SocialMedia } from '../components/SocialMedia/SocialMedia';
 const Home: React.FC = () => {
   return (
     <div className="bg-orange bg-no-repeat bg-cover w-screen h-screen flex justify-between p-8 relative">
-      <Helmet>
-        <meta name="description" content="Pokemon list app" />
-        <link rel="icon" href="/public/pokemon_favicon.svg" type="image/svg" />
-
-        <title>Home - Pokédex</title>
-      </Helmet>
-
       <div className="flex flex-col justify-center">
         <div className="bg-white p-2 mb-8 mr-auto rounded-xl">
           <MdCatchingPokemon size={40} color="#fe6613" />

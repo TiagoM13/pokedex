@@ -1,4 +1,4 @@
-export interface Pokemons {
+export interface IPokemons {
   data: {
     id: number;
     name: string;

@@ -3,11 +3,11 @@ import { useEffect, useState } from 'react';
 
 import axios from 'axios';
 
-import { Pokemons } from '../interfaces/pokemons';
+import { IPokemons } from '../interfaces/pokemons';
 
 export const useGetPokemonsData = () => {
   const [loading, setLoading] = useState(false);
-  const [pokemons, setPokemons] = useState<Pokemons[]>([]);
+  const [pokemons, setPokemons] = useState<IPokemons[]>([]);
 
   useEffect(() => {
     setLoading(true);

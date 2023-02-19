@@ -3,7 +3,7 @@ import React from 'react';
 import { usePagination } from '../../hooks/usePagination';
 import { useGetPokemonsData } from '../../hooks/usePokemons';
 import { ListProps } from '../../interfaces/list';
-import { Pokemons } from '../../interfaces/pokemons';
+import { IPokemons } from '../../interfaces/pokemons';
 import { getFirstLetterCapitalized } from '../../utils/getFirstLetterCapitalized';
 import { Loading } from '../Loading/Loading';
 import { PokemonCard } from '../PokemonCard';
@@ -12,7 +12,7 @@ import { ShowMoreButton } from '../ShowMoreButton/ShowMoreButton';
 export const ListPokemon = ({ data }: ListProps) => {
   const itemsPerPage = 20;
   const { loading } = useGetPokemonsData();
-  const { currentItems, showMoreItems, loadItems } = usePagination<Pokemons>({
+  const { currentItems, showMoreItems, loadItems } = usePagination<IPokemons>({
     data,
     itemsPerPage,
   });

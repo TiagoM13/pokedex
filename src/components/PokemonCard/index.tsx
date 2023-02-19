@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 
-import { IPokemonCard } from '../../interfaces/card';
+import { IPokemonCard } from '../../interfaces/pokemonCard';
 import { getNumberOrderFormat } from '../../utils/getNumberOrderFormat';
 import {
   getTypesToBackgroundColor,

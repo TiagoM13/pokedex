@@ -1,9 +1,7 @@
 import React from 'react';
 
-import { GithubLogo, LinkedinLogo, TwitterLogo } from 'phosphor-react';
-
 import Logo from '../../assets/logo/pokemon-logo.svg';
-import { Anchor } from '../Anchor/Anchor';
+import { SocialMedia } from '../SocialMedia/SocialMedia';
 
 export const Footer: React.FC = () => {
   return (
@@ -13,16 +11,8 @@ export const Footer: React.FC = () => {
           <img src={Logo} alt="Logo pokemon" className="w-[250px] m-2" />
         </div>
 
-        <div className="flex gap-1 mt-4 mb-2">
-          <Anchor url="https://github.com/TiagoM13">
-            <GithubLogo size={25} weight="bold" color="#FFF" />
-          </Anchor>
-          <Anchor url="https://www.linkedin.com/in/tiago-mota-4690591a8/">
-            <LinkedinLogo size={25} weight="bold" color="#FFF" />
-          </Anchor>
-          <Anchor url="https://twitter.com/tiago_m13">
-            <TwitterLogo size={25} weight="bold" color="#FFF" />
-          </Anchor>
+        <div className="mt-4 mb-2">
+          <SocialMedia />
         </div>
 
         <p className="text-xs my-2">Powered by Tiago Mota Ribeiro</p>

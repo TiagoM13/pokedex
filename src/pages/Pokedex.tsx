@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Footer } from '../components/Footer/Footer';
 import { Header } from '../components/Header';
 import { ListPokemon } from '../components/ListPokemon';
 import { useGetPokemonsData } from '../hooks/usePokemons';
@@ -11,6 +12,7 @@ const PokedexList: React.FC = () => {
     <>
       <Header getFilterPokemon={FilterPokemon} />
       <ListPokemon data={pokemons} />
+      <Footer />
     </>
   );
 };

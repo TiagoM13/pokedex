@@ -16,7 +16,7 @@ export const Header = ({ getFilterPokemon }: IHeader) => {
   };
 
   return (
-    <header className="bg-[#025fca]">
+    <header className="bg-[#fe6613]">
       <div className="flex justify-between items-center py-6 px-1 mx-4 mb-2">
         <Link to={paths.HOME} reloadDocument>
           <div className="flex items-center">
@@ -26,9 +26,7 @@ export const Header = ({ getFilterPokemon }: IHeader) => {
               loading="lazy"
               className="w-[15%] pr-2"
             />
-            <h1 className="text-[#fcefd4] font-bold text-3xl text-center">
-              Pokédex
-            </h1>
+            <h1 className="text-white font-extrabold text-3xl">Pokédex</h1>
           </div>
         </Link>
         <div className="flex items-center relative">

@@ -10,8 +10,8 @@ import { Loading } from '../Loading/Loading';
 import { PokemonCard } from '../PokemonCard';
 
 export const ListPokemon = ({ data }: ListProps) => {
-  const { loading } = useGetPokemonsData();
   const itemsPerPage = 20;
+  const { loading } = useGetPokemonsData();
   const { currentItems, showMoreItems, loadItems } = usePagination<Pokemons>({
     data,
     itemsPerPage,
@@ -24,7 +24,7 @@ export const ListPokemon = ({ data }: ListProps) => {
           <Loading title_page="pokemon list" />
         </div>
       ) : (
-        <ul className="grid grid-cols-6 gap-1 justify-items-center">
+        <ul className="grid grid-cols-6 gap-1 justify-items-center mt-8">
           {currentItems.map((pokemon) => {
             return (
               <PokemonCard
@@ -48,14 +48,14 @@ export const ListPokemon = ({ data }: ListProps) => {
 
       {currentItems.length < data.length && (
         <button
-          className="flex gap-2 items-center mx-auto bg-blue-700 py-2 px-4 my-4 text-white text-base border-none  rounded-lg hover:brightness-90 hover:scale-105 transition-all disabled:cursor-not-allowed disabled:scale-100 disabled:brightness-100"
+          className="flex gap-2 items-center mx-auto bg-[#fe6613] py-2 px-4 my-4 text-white text-base border-none  rounded-lg hover:brightness-95 hover:scale-105 transition-all disabled:cursor-not-allowed disabled:scale-100 disabled:brightness-100"
           type="button"
           onClick={showMoreItems}
           disabled={loadItems}
         >
           <MdOutlineCatchingPokemon
             size={25}
-            className={`text-white ${loadItems ? 'animate-loading' : ''}`}
+            className={`text-white ${loadItems && 'animate-loading'}`}
           />
           {loadItems ? 'Loading pokemons...' : 'Show more pokemons'}
         </button>

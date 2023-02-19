@@ -4,10 +4,8 @@ import { CgPokemon } from 'react-icons/cg';
 import { MdCatchingPokemon } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 
-import { GithubLogo, LinkedinLogo, TwitterLogo } from 'phosphor-react';
-
 import img from '../assets/img/Charizard-Pokemon.png';
-import { Anchor } from '../components/Anchor/Anchor';
+import { SocialMedia } from '../components/SocialMedia/SocialMedia';
 import { paths } from '../routes/app_route';
 
 const Home: React.FC = () => {
@@ -26,7 +24,7 @@ const Home: React.FC = () => {
         </div>
         <div className="text-white">
           <h1 className="text-4xl font-bold">
-            <span className="text-6xl">Pokédex</span>
+            <span className="text-6xl font-extrabold">Pokédex</span>
             <br />
             Get the list of all pokemons!
           </h1>
@@ -47,16 +45,8 @@ const Home: React.FC = () => {
           </Link>
         </div>
 
-        <div className="flex absolute bottom-5">
-          <Anchor url="https://github.com/TiagoM13">
-            <GithubLogo size={25} weight="bold" color="#FFF" />
-          </Anchor>
-          <Anchor url="https://www.linkedin.com/in/tiago-mota-4690591a8/">
-            <LinkedinLogo size={25} weight="bold" color="#FFF" />
-          </Anchor>
-          <Anchor url="https://twitter.com/tiago_m13">
-            <TwitterLogo size={25} weight="bold" color="#FFF" />
-          </Anchor>
+        <div className="absolute bottom-5">
+          <SocialMedia />
         </div>
       </div>
 

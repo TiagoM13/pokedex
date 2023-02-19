@@ -16,13 +16,13 @@ export const usePagination = <T>({
 
   const currentItems = data.slice(0, currentItemsCount);
 
-  function showMoreItems() {
+  const showMoreItems = () => {
     setLoadItems(true);
     setTimeout(() => {
       setCurrentItemsCount((count) => count + itemsPerPage);
       setLoadItems(false);
     }, 1000);
-  }
+  };
 
   return {
     currentItems,

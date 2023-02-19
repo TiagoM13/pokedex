@@ -1,5 +1,5 @@
-import { Pokemons } from './pokemons';
+import { IPokemons } from './pokemons';
 
 export type ListProps = {
-  data: Pokemons[];
+  data: IPokemons[];
 };

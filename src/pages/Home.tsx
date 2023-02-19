@@ -1,23 +1,14 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import { CgPokemon } from 'react-icons/cg';
 import { MdCatchingPokemon } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 
 import img from '../assets/img/Charizard-Pokemon.png';
 import { SocialMedia } from '../components/SocialMedia/SocialMedia';
-import { paths } from '../routes/app_route';
 
 const Home: React.FC = () => {
   return (
     <div className="bg-orange bg-no-repeat bg-cover w-screen h-screen flex justify-between p-8 relative">
-      <Helmet>
-        <meta name="description" content="Pokemon list app" />
-        <link rel="icon" href="/public/pokemon_favicon.svg" type="image/svg" />
-
-        <title>Home - Pokédex</title>
-      </Helmet>
-
       <div className="flex flex-col justify-center">
         <div className="bg-white p-2 mb-8 mr-auto rounded-xl">
           <MdCatchingPokemon size={40} color="#fe6613" />
@@ -34,7 +25,7 @@ const Home: React.FC = () => {
         </div>
 
         <div className="py-4 my-4">
-          <Link to={paths.POKEDEX} reloadDocument>
+          <Link to="/Pokedex" reloadDocument>
             <button
               type="button"
               className="flex items-center justify-between bg-yellow-400 p-3 font-bold rounded-md hover:bg-zinc-100  transition duration-500 drop-shadow-2xl shadow-black"

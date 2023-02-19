@@ -20,9 +20,7 @@ export const ListPokemon = ({ data }: ListProps) => {
   return (
     <div>
       {loading ? (
-        <div className="flex justify-center">
-          <Loading title_page="pokemon list" />
-        </div>
+        <Loading />
       ) : (
         <ul className="grid grid-cols-6 gap-1 justify-items-center mt-8">
           {currentItems.map((pokemon) => {

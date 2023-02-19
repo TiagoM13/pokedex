@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 
 import img from '../assets/img/Charizard-Pokemon.png';
 import { SocialMedia } from '../components/SocialMedia/SocialMedia';
-import { paths } from '../routes/app_route';
 
 const Home: React.FC = () => {
   return (
@@ -34,7 +33,7 @@ const Home: React.FC = () => {
         </div>
 
         <div className="py-4 my-4">
-          <Link to={paths.POKEDEX} reloadDocument>
+          <Link to="/Pokedex" reloadDocument>
             <button
               type="button"
               className="flex items-center justify-between bg-yellow-400 p-3 font-bold rounded-md hover:bg-zinc-100  transition duration-500 drop-shadow-2xl shadow-black"

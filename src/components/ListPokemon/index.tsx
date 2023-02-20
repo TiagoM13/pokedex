@@ -26,8 +26,8 @@ export const ListPokemon = ({ data }: ListProps) => {
           {currentItems.map((pokemon) => {
             return (
               <PokemonCard
-                key={pokemon.data.order}
-                order={pokemon.data.order}
+                key={pokemon.data.id}
+                id={pokemon.data.id}
                 name={getFirstLetterCapitalized(pokemon.data.name)}
                 abilities={{
                   ability_1: pokemon.data.abilities[0]?.ability.name,
@@ -37,7 +37,9 @@ export const ListPokemon = ({ data }: ListProps) => {
                   type_1: pokemon.data.types[0].type.name,
                   type_2: pokemon.data.types[1]?.type.name,
                 }}
-                url_img={pokemon.data.sprites.front_default}
+                url_img={
+                  pokemon.data.sprites.other['official-artwork'].front_default
+                }
               />
             );
           })}

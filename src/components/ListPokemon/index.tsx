@@ -29,14 +29,7 @@ export const ListPokemon = ({ data }: ListProps) => {
                 key={pokemon.data.id}
                 id={pokemon.data.id}
                 name={getFirstLetterCapitalized(pokemon.data.name)}
-                abilities={{
-                  ability_1: pokemon.data.abilities[0]?.ability.name,
-                  ability_2: pokemon.data.abilities[1]?.ability.name,
-                }}
-                types={{
-                  type_1: pokemon.data.types[0].type.name,
-                  type_2: pokemon.data.types[1]?.type.name,
-                }}
+                types={pokemon.data.types}
                 url_img={
                   pokemon.data.sprites.other['official-artwork'].front_default
                 }

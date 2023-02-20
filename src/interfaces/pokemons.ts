@@ -3,10 +3,25 @@ export interface IPokemons {
     id: number;
     name: string;
     sprites: ISprites;
-    types: [{ type: { name: string } }, { type: { name: string } }];
-    abilities: [{ ability: { name: string } }, { ability: { name: string } }];
+    types: {
+      type: {
+        name: string;
+      };
+    }[];
+    abilities: {
+      ability: {
+        name: string;
+      };
+    }[];
     weight: number;
     height: number;
+    stats: {
+      base_stat: number;
+      effort: number;
+      stat: {
+        name: string;
+      };
+    }[];
   };
 }
 

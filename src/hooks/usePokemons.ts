@@ -9,6 +9,8 @@ export const useGetPokemonsData = () => {
   const [loading, setLoading] = useState(false);
   const [pokemons, setPokemons] = useState<IPokemons[]>([]);
 
+  // console.log(pokemons);
+
   useEffect(() => {
     setLoading(true);
     getPokemons().finally(() => setLoading(false));

@@ -9,7 +9,7 @@ import {
 } from '../../utils/getTheme';
 import { TypeCard } from './TypeCard';
 
-export const PokemonCard = ({ name, order, types, url_img }: IPokemonCard) => {
+export const PokemonCard = ({ name, id, types, url_img }: IPokemonCard) => {
   return (
     <li
       style={{
@@ -23,7 +23,7 @@ export const PokemonCard = ({ name, order, types, url_img }: IPokemonCard) => {
         <div className="flex flex-col">
           <h3 className="font-black line-clamp-1 text-sm">{name}</h3>
           <span className="font-semibold text-xs">
-            {getNumberOrderFormat(order)}
+            {getNumberOrderFormat(id)}
           </span>
         </div>
         <div className="pt-2 font-semibold text-[10px]">

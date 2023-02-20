@@ -1,5 +1,5 @@
 export interface IPokemonCard {
-  order: number;
+  id: number;
   name: string;
   url_img: string;
   types: {

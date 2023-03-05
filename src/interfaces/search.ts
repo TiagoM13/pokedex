@@ -1,3 +1,3 @@
-export interface IHeader {
+export interface ISearch {
   getFilterPokemon: (e: string) => void;
 }

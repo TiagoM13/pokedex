@@ -3,10 +3,11 @@ import { Helmet } from 'react-helmet';
 
 import { Footer } from '../components/Footer/Footer';
 import { Header } from '../components/Header';
+import { InputSearch } from '../components/InputSearch/InputSearch';
 import { ListPokemon } from '../components/ListPokemon';
 import { useGetPokemonsData } from '../hooks/usePokemons';
 
-const PokedexList: React.FC = () => {
+const Pokedex: React.FC = () => {
   const { pokemons, FilterPokemon } = useGetPokemonsData();
 
   return (
@@ -16,11 +17,14 @@ const PokedexList: React.FC = () => {
         <title>Pokédex - List Pokémon</title>
       </Helmet>
 
-      <Header getFilterPokemon={FilterPokemon} />
+      <Header />
+
+      <InputSearch getFilterPokemon={FilterPokemon} />
+
       <ListPokemon data={pokemons} />
       <Footer />
     </>
   );
 };
 
-export default PokedexList;
+export default Pokedex;

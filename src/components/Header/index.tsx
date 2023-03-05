@@ -2,42 +2,37 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { MagnifyingGlass } from 'phosphor-react';
+import { ArrowLeft } from 'phosphor-react';
 
-import Pokebola from '../../assets/logo/logo_pokebola.png';
-import { IHeader } from '../../interfaces/header';
+import Pikachu from '../../assets/img/pikachu-2.png';
+import Logo from '../../assets/logo/logo.png';
 
-export const Header = ({ getFilterPokemon }: IHeader) => {
+export const Header = () => {
   return (
-    <header className="bg-[#fe6613]">
-      <div className="flex justify-between items-center py-6 px-1 mx-4 mb-2">
-        <Link to="/" reloadDocument>
-          <div className="flex items-center">
-            <img
-              src={Pokebola}
-              alt="Pokebola"
-              loading="lazy"
-              className="w-[15%] pr-2"
-            />
-            <h1 className="text-white font-extrabold text-3xl">Pokédex</h1>
-          </div>
+    <header className="bg-[#fe6613] pt-4 px-4">
+      <div className="flex justify-between">
+        <Link
+          to="/"
+          reloadDocument
+          className="text-white font-semibold flex items-center gap-1 mb-8 hover:text-blue-700 transition-all"
+        >
+          <ArrowLeft weight="bold" />
+          Home
         </Link>
 
-        <div className="flex items-center relative">
-          <input
-            onChange={(e) => getFilterPokemon(e.target.value)}
-            name="Search"
-            type="text"
-            placeholder="Search pokemons..."
-            className="placeholder:italic placeholder:text-slate-400 text-zinc-500 border border-slate-300 bg-zinc-100 rounded-md mx-1 py-1 px-2 shadow-sm focus:outline-none focus:border-zinc-500 focus:ring-1"
+        <div className="flex items-center">
+          <img
+            src={Logo}
+            alt="Pokémon"
+            title="Pokémon"
+            width="120px"
+            loading="eager"
           />
-          <button
-            type="button"
-            className="px-2 py-1.5 right-1 font-semibold text-sm rounded-md absolute hover:bg-slate-200 transition"
-          >
-            <MagnifyingGlass size={20} color="#aaa" weight="bold" />
-          </button>
         </div>
+      </div>
+
+      <div className="flex justify-center">
+        <img src={Pikachu} alt="Pokebola" width="350px" className="-mb-11" />
       </div>
     </header>
   );

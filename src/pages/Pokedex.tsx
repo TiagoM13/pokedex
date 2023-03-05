@@ -6,7 +6,7 @@ import { Header } from '../components/Header';
 import { ListPokemon } from '../components/ListPokemon';
 import { useGetPokemonsData } from '../hooks/usePokemons';
 
-const PokedexList: React.FC = () => {
+const Pokedex: React.FC = () => {
   const { pokemons, FilterPokemon } = useGetPokemonsData();
 
   return (
@@ -23,4 +23,4 @@ const PokedexList: React.FC = () => {
   );
 };
 
-export default PokedexList;
+export default Pokedex;

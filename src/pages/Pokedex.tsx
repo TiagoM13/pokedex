@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 
 import { Footer } from '../components/Footer/Footer';
 import { Header } from '../components/Header';
+import { InputSearch } from '../components/InputSearch/InputSearch';
 import { ListPokemon } from '../components/ListPokemon';
 import { useGetPokemonsData } from '../hooks/usePokemons';
 
@@ -16,7 +17,10 @@ const Pokedex: React.FC = () => {
         <title>Pokédex - List Pokémon</title>
       </Helmet>
 
-      <Header getFilterPokemon={FilterPokemon} />
+      <Header />
+
+      <InputSearch getFilterPokemon={FilterPokemon} />
+
       <ListPokemon data={pokemons} />
       <Footer />
     </>

@@ -19,4 +19,5 @@ export interface IPokemonCard {
       name: string;
     };
   }[];
+  getId: (id: number) => void;
 }

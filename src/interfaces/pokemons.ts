@@ -25,7 +25,7 @@ export interface IPokemons {
   };
 }
 
-interface ISprites {
+export interface ISprites {
   front_default: string;
   front_shiny: string;
   other: {

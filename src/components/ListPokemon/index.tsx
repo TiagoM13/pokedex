@@ -26,7 +26,7 @@ export const ListPokemon = ({ data, handleSelectedId }: ListProps) => {
           {currentItems.map((pokemon) => {
             return (
               <PokemonCard
-                getId={() => handleSelectedId(pokemon.data.id)}
+                getSelectedPokemon={() => handleSelectedId(pokemon.data.id)}
                 key={pokemon.data.id}
                 id={pokemon.data.id}
                 name={getFirstLetterCapitalized(pokemon.data.name)}

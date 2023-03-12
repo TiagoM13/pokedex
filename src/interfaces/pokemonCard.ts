@@ -19,5 +19,5 @@ export interface IPokemonCard {
       name: string;
     };
   }[];
-  getId: (id: number) => void;
+  getSelectedPokemon: (id: number) => void;
 }

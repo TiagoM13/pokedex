@@ -11,11 +11,11 @@ import {
 } from '../../utils/getTheme';
 import { TypeCard } from './TypeCard';
 
-export const PokemonCard = ({ name, id, types, url_img, getId }: IPokemonCard) => {
+export const PokemonCard = ({ name, id, types, url_img, getSelectedPokemon }: IPokemonCard) => {
   return (
     <>
       <li
-        onClick={() => getId(id)}
+        onClick={() => getSelectedPokemon(id)}
         style={{
           backgroundColor: types[0].type.name
             ? getTypesToBackgroundColor(types[0].type.name.toUpperCase())

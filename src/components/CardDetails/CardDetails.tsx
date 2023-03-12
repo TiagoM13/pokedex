@@ -17,7 +17,7 @@ const formatHeightWeight = (value: number) => {
 
 export const CardDetails = ({ id, name, img, types, weight, height, abilities, stats }: ICardDatails) => {
   return (
-    <div className="bg-white w-[400px] mx-auto mb-10 rounded-2xl border border-zinc-300 overflow-hidden">
+    <div className="bg-white w-[400px] mx-auto rounded-2xl border border-zinc-300 overflow-hidden">
       <div
         className="bg-zinc-500 flex flex-col items-center text-white px-4 py-4 rounded-b-[50%]"
       >
@@ -97,10 +97,10 @@ export const CardDetails = ({ id, name, img, types, weight, height, abilities, s
       </div>
 
       <div className="flex flex-col items-center pt-4 pb-8">
-        <h3 className='flex items-center text-sm font-semibold text-zinc-500 gap-2 mb-1 uppercase'>
+        {/* <h3 className='flex items-center text-sm font-semibold text-zinc-500 gap-2 mb-1 uppercase'>
           <ImStatsBars size={15} className="text-zinc-500" />
           Base Stats
-        </h3>
+        </h3> */}
         {stats?.map((stats, index) => {
           return (
             <div key={index} className="flex gap-2 px-4">

@@ -6,12 +6,19 @@ import { Footer } from '../components/Footer/Footer';
 import { Header } from '../components/Header';
 import { InputSearch } from '../components/InputSearch/InputSearch';
 import { ListPokemon } from '../components/ListPokemon';
+import { ContentModal } from '../components/Modal';
 import { useGetPokemonsData } from '../hooks/usePokemons';
 import { useSelectPokemon } from '../hooks/useSelectPokemon';
 
 const Pokedex: React.FC = () => {
   const { pokemons, FilterPokemon } = useGetPokemonsData();
-  const { itemDetails, handleSelected, selectedItemId } = useSelectPokemon();
+  const {
+    active,
+    itemDetails,
+    handleSelected,
+    selectedItemId,
+    handleOnToggleModal,
+  } = useSelectPokemon();
 
   return (
     <>
@@ -27,18 +34,19 @@ const Pokedex: React.FC = () => {
       <ListPokemon data={pokemons} handleSelectedId={handleSelected} />
       <Footer />
 
-      {selectedItemId && (
-        <CardDetails
-          stats={itemDetails?.stats}
-          id={itemDetails?.id}
-          name={itemDetails?.name}
-          types={itemDetails?.types}
-          img={itemDetails?.sprites.other['official-artwork'].front_default}
-          weight={itemDetails?.weight!}
-          height={itemDetails?.height!}
-          abilities={itemDetails?.abilities!}
-        />
-      )}
+      <ContentModal active={active} onCloseModal={handleOnToggleModal}>
+        {selectedItemId && (
+          <CardDetails
+            id={itemDetails?.id}
+            name={itemDetails?.name}
+            types={itemDetails?.types}
+            img={itemDetails?.sprites.other['official-artwork'].front_default}
+            weight={itemDetails?.weight!}
+            height={itemDetails?.height!}
+            abilities={itemDetails?.abilities!}
+          />
+        )}
+      </ContentModal>
     </>
   );
 };

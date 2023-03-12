@@ -29,6 +29,7 @@ const Pokedex: React.FC = () => {
 
       {selectedItemId && (
         <CardDetails
+          stats={itemDetails?.stats}
           id={itemDetails?.id}
           name={itemDetails?.name}
           types={itemDetails?.types}

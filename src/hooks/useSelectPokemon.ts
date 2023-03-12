@@ -4,6 +4,7 @@ import { detailsPokemon } from '../interfaces/detailsPokemon';
 import { api } from '../lib/axios';
 
 export const useSelectPokemon = () => {
+  const [active, setActive] = useState(false);
   const [selectedItemId, setSelectedItemId] = useState<number | null>(null);
   const [itemDetails, setItemDetails] = useState<detailsPokemon | null>(null);
 
@@ -15,6 +16,10 @@ export const useSelectPokemon = () => {
     }
   }, [selectedItemId]);
 
+  const handleOnToggleModal = useCallback(() => {
+    setActive(!active);
+  }, [active]);
+
   const handleSelectedPokemon = useCallback((itemId: number) => {
     setSelectedItemId(itemId);
   }, []);
@@ -22,13 +27,16 @@ export const useSelectPokemon = () => {
   const handleSelected = useCallback(
     (itemId: number) => {
       handleSelectedPokemon(itemId);
+      handleOnToggleModal();
     },
-    [handleSelectedPokemon]
+    [handleSelectedPokemon, handleOnToggleModal]
   );
 
   return {
+    active,
     itemDetails,
-    handleSelected,
     selectedItemId,
+    handleSelected,
+    handleOnToggleModal,
   };
 };

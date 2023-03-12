@@ -5,41 +5,17 @@ import { CgPokemon } from 'react-icons/cg';
 import { FaWeightHanging } from 'react-icons/fa';
 import { ImStatsBars } from 'react-icons/im';
 
+import { ICardDatails } from '../../interfaces/cardDatails';
 import { getNumberOrderFormat } from '../../utils/getNumberOrderFormat';
 import { getTypesToBackgroundColor, getTypesToIconsTypes } from '../../utils/getTheme';
 import { TypeCard } from '../PokemonCard/TypeCard';
-
-interface Props {
-  id?: number;
-  name?: string;
-  img?: string;
-  types?: {
-    type: {
-      name: string;
-    };
-  }[];
-  abilities: {
-    ability: {
-      name: string;
-    };
-  }[];
-  stats?: {
-    base_stat: number;
-    effort: number;
-    stat: {
-      name: string;
-    };
-  }[];
-  weight: number;
-  height: number;
-}
 
 const formatHeightWeight = (value: number) => {
   const format = value / 10;
   return format;
 }
 
-export const CardDetails = ({ id, name, img, types, weight, height, abilities, stats }: Props) => {
+export const CardDetails = ({ id, name, img, types, weight, height, abilities, stats }: ICardDatails) => {
   return (
     <div className="bg-white w-[400px] mx-auto mb-10 rounded-2xl border border-zinc-300 overflow-hidden">
       <div
@@ -76,13 +52,11 @@ export const CardDetails = ({ id, name, img, types, weight, height, abilities, s
         <div className="w-full px-2">
           <h3 className='flex items-center text-sm font-semibold text-zinc-500 gap-2 mb-1 uppercase'>
             <FaWeightHanging size={15} className="text-zinc-500" />
-            {' '}
             Peso:
           </h3>
           <div className="text-center font-medium border border-zinc-300 rounded-lg py-2 px-3">
             <span className="text-base">
               {formatHeightWeight(weight)}
-              {' '}
               kg
             </span>
           </div>
@@ -91,13 +65,11 @@ export const CardDetails = ({ id, name, img, types, weight, height, abilities, s
         <div className="w-full px-2">
           <h3 className='flex items-center text-sm font-semibold text-zinc-500 gap-2 mb-1 uppercase'>
             <AiOutlineColumnHeight size={15} className="text-zinc-500" />
-            {' '}
             Altura:
           </h3>
           <div className="text-center font-medium border border-zinc-300 rounded-lg py-2 px-3">
             <span className="text-base">
               {formatHeightWeight(height)}
-              {' '}
               m
             </span>
           </div>

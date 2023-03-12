@@ -9,7 +9,7 @@ import { Loading } from '../Loading/Loading';
 import { PokemonCard } from '../PokemonCard';
 import { ShowMoreButton } from '../ShowMoreButton/ShowMoreButton';
 
-export const ListPokemon = ({ data }: ListProps) => {
+export const ListPokemon = ({ data, handleSelectedId }: ListProps) => {
   const itemsPerPage = 20;
   const { loading } = useGetPokemonsData();
   const { currentItems, showMoreItems, loadItems } = usePagination<IPokemons>({
@@ -26,6 +26,7 @@ export const ListPokemon = ({ data }: ListProps) => {
           {currentItems.map((pokemon) => {
             return (
               <PokemonCard
+                getSelectedPokemon={() => handleSelectedId(pokemon.data.id)}
                 key={pokemon.data.id}
                 id={pokemon.data.id}
                 name={getFirstLetterCapitalized(pokemon.data.name)}

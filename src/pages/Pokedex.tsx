@@ -11,7 +11,7 @@ import { useSelectPokemon } from '../hooks/useSelectPokemon';
 
 const Pokedex: React.FC = () => {
   const { pokemons, FilterPokemon } = useGetPokemonsData();
-  const { itemDetails, handleClick, selectedItemId } = useSelectPokemon();
+  const { itemDetails, handleSelected, selectedItemId } = useSelectPokemon();
 
   return (
     <>
@@ -24,7 +24,7 @@ const Pokedex: React.FC = () => {
 
       <InputSearch getFilterPokemon={FilterPokemon} />
 
-      <ListPokemon data={pokemons} handleSelectedId={handleClick} />
+      <ListPokemon data={pokemons} handleSelectedId={handleSelected} />
       <Footer />
 
       {selectedItemId && (

@@ -15,20 +15,20 @@ export const useSelectPokemon = () => {
     }
   }, [selectedItemId]);
 
-  const handleItemClick = useCallback((itemId: number) => {
+  const handleSelectedPokemon = useCallback((itemId: number) => {
     setSelectedItemId(itemId);
   }, []);
 
-  const handleClick = useCallback(
+  const handleSelected = useCallback(
     (itemId: number) => {
-      handleItemClick(itemId);
+      handleSelectedPokemon(itemId);
     },
-    [handleItemClick]
+    [handleSelectedPokemon]
   );
 
   return {
     itemDetails,
-    handleClick,
+    handleSelected,
     selectedItemId,
   };
 };

@@ -11,7 +11,7 @@ export const ContentModal = ({ active, children, onCloseModal }: IModal) => {
       isOpen={active}
       onRequestClose={onCloseModal}
       overlayClassName="overlay-content"
-      className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-2xl"
+      className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-2xl animate-modal"
     >
       <button
         type="button"

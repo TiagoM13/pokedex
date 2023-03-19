@@ -8,7 +8,7 @@ import { ImStatsBars } from 'react-icons/im';
 import { ICardDatails } from '../../interfaces/cardDatails';
 import { getNumberOrderFormat } from '../../utils/getNumberOrderFormat';
 import { getTypesToBackgroundColor, getTypesToIconsTypes } from '../../utils/getTheme';
-import { TypeCard } from '../PokemonCard/TypeCard';
+import { TypeCard } from '../TypeCard';
 
 const formatHeightWeight = (value: number) => {
   const format = value / 10;
@@ -19,6 +19,11 @@ export const CardDetails = ({ id, name, img, types, weight, height, abilities, s
   return (
     <div className="bg-white w-[400px] mx-auto rounded-2xl border border-zinc-300 overflow-hidden">
       <div
+        style={{
+          backgroundColor: types![0].type.name
+            ? getTypesToBackgroundColor(types![0].type.name.toUpperCase())
+            : '#9d9b9b',
+        }}
         className="bg-zinc-500 flex flex-col items-center text-white px-4 py-4 rounded-b-[50%]"
       >
         <div className="w-[240px] flex justify-center -mb-14">

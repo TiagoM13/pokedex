@@ -9,7 +9,7 @@ import Logo from '../../assets/logo/logo.png';
 
 export const Header = () => {
   return (
-    <header className="bg-[#fe6613] pt-4 px-4">
+    <header className="bg-[#fe6613] pt-4 px-4 h-[310px]">
       <div className="flex justify-between">
         <Link
           to="/"

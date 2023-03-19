@@ -4,7 +4,6 @@ import { usePagination } from '../../hooks/usePagination';
 import { useGetPokemonsData } from '../../hooks/usePokemons';
 import { ListProps } from '../../interfaces/list';
 import { IPokemons } from '../../interfaces/pokemons';
-import { getFirstLetterCapitalized } from '../../utils/getFirstLetterCapitalized';
 import { Loading } from '../Loading/Loading';
 import { PokemonCard } from '../PokemonCard';
 import { ShowMoreButton } from '../ShowMoreButton/ShowMoreButton';
@@ -29,7 +28,7 @@ export const ListPokemon = ({ data, handleSelectedId }: ListProps) => {
                 getSelectedPokemon={() => handleSelectedId(pokemon.data.id)}
                 key={pokemon.data.id}
                 id={pokemon.data.id}
-                name={getFirstLetterCapitalized(pokemon.data.name)}
+                name={pokemon.data.name}
                 types={pokemon.data.types}
                 url_img={
                   pokemon.data.sprites.other['official-artwork'].front_default

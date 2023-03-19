@@ -25,7 +25,7 @@ export const PokemonCard = ({ name, id, types, url_img, getSelectedPokemon }: IP
       >
         <div className="py-4 px-1">
           <div className="flex flex-col">
-            <h3 className="font-black line-clamp-1 text-sm">{name}</h3>
+            <h3 className="font-black line-clamp-1 text-sm capitalize">{name}</h3>
             <span className="font-semibold text-xs">
               {getNumberOrderFormat(id)}
             </span>

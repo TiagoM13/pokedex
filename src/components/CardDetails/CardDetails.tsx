@@ -8,7 +8,7 @@ import { ImStatsBars } from 'react-icons/im';
 import { ICardDatails } from '../../interfaces/cardDatails';
 import { getNumberOrderFormat } from '../../utils/getNumberOrderFormat';
 import { getTypesToBackgroundColor, getTypesToIconsTypes } from '../../utils/getTheme';
-import { TypeCard } from '../PokemonCard/TypeCard';
+import { TypeCard } from '../TypeCard';
 
 const formatHeightWeight = (value: number) => {
   const format = value / 10;

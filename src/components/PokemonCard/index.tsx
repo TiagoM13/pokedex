@@ -9,7 +9,7 @@ import {
   getTypesToBackgroundColor,
   getTypesToIconsTypes,
 } from '../../utils/getTheme';
-import { TypeCard } from './TypeCard';
+import { TypeCard } from '../TypeCard';
 
 export const PokemonCard = ({ name, id, types, url_img, getSelectedPokemon }: IPokemonCard) => {
   return (

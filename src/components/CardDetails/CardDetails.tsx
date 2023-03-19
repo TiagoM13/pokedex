@@ -20,7 +20,7 @@ export const CardDetails = ({ id, name, img, types, weight, height, abilities, s
     <div className="bg-white w-[400px] mx-auto rounded-2xl border border-zinc-300 overflow-hidden">
       <div
         style={{
-          backgroundColor: types![0].type.name
+          backgroundColor: id!
             ? getTypesToBackgroundColor(types![0].type.name.toUpperCase())
             : '#9d9b9b',
         }}

@@ -15,7 +15,7 @@ export const ContentModal = ({ active, children, onCloseModal }: IModal) => {
     >
       <button
         type="button"
-        className="absolute right-2 top-2 text-white hover:brightness-75"
+        className="absolute right-2 top-2 text-white hover:brightness-90"
         onClick={onCloseModal}
       >
         <X size={25} weight="bold" />

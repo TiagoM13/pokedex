@@ -1,4 +1,4 @@
-import { IPokemons } from './pokemons';
+import { IPokemons } from '@interfaces/pokemons';
 
 export type ListProps = {
   data: IPokemons[];

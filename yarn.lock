@@ -3232,6 +3232,11 @@
     "merge2" "^1.4.1"
     "slash" "^3.0.0"
 
+"globrex@^0.1.2":
+  "integrity" "sha512-uHJgbwAMwNFf5mLst7IWLNg14x1CkeqglJb/K3doi4dw6q2IvAAmM/Y81kevy83wP+Sst+nutFTYOGg3d1lsxg=="
+  "resolved" "https://registry.npmjs.org/globrex/-/globrex-0.1.2.tgz"
+  "version" "0.1.2"
+
 "gopd@^1.0.1":
   "integrity" "sha512-d65bNlIadxvpb/A2abVdlqKqV563juRnZ1Wtk6s1sIR8uNsXR70xqIzVqxVf1eTqDunwT2MkczEeaezCKTZhwA=="
   "resolved" "https://registry.npmjs.org/gopd/-/gopd-1.0.1.tgz"
@@ -6736,6 +6741,11 @@
     "semver" "7.x"
     "yargs-parser" "20.x"
 
+"tsconfck@^2.1.0":
+  "integrity" "sha512-ZPCkJBKASZBmBUNqGHmRhdhM8pJYDdOXp4nRgj/O0JwUwsMq50lCDRQP/M5GBNAA0elPrq4gAeu4dkaVCuKWww=="
+  "resolved" "https://registry.npmjs.org/tsconfck/-/tsconfck-2.1.1.tgz"
+  "version" "2.1.1"
+
 "tsconfig-paths@^3.14.1":
   "integrity" "sha512-fxDhWnFSLt3VuTwtvJt5fpwxBHg5AdKWMsgcPOOIilyjymcYVZoCQF8fvFRezCNfblEXmi+PcM1eYHeOAgXCOQ=="
   "resolved" "https://registry.npmjs.org/tsconfig-paths/-/tsconfig-paths-3.14.1.tgz"
@@ -6837,7 +6847,7 @@
   dependencies:
     "is-typedarray" "^1.0.0"
 
-"typescript@^4.9.3", "typescript@>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta", "typescript@>=3.8 <5.0":
+"typescript@^4.3.5 || ^5.0.0", "typescript@^4.9.3", "typescript@>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta", "typescript@>=3.8 <5.0":
   "integrity" "sha512-Uz+dTXYzxXXbsFpM86Wh3dKCxrQqUcVMxwU54orwlJjOpO3ao8L7j5lH+dWfTwgCwIuM9GQ2kvVotzYJMXTBZg=="
   "resolved" "https://registry.npmjs.org/typescript/-/typescript-4.9.4.tgz"
   "version" "4.9.4"
@@ -6970,7 +6980,16 @@
     "core-util-is" "1.0.2"
     "extsprintf" "^1.2.0"
 
-"vite@^4.0.0":
+"vite-tsconfig-paths@^4.2.0":
+  "integrity" "sha512-jGpus0eUy5qbbMVGiTxCL1iB9ZGN6Bd37VGLJU39kTDD6ZfULTTb1bcc5IeTWqWJKiWV5YihCaibeASPiGi8kw=="
+  "resolved" "https://registry.npmjs.org/vite-tsconfig-paths/-/vite-tsconfig-paths-4.2.0.tgz"
+  "version" "4.2.0"
+  dependencies:
+    "debug" "^4.1.1"
+    "globrex" "^0.1.2"
+    "tsconfck" "^2.1.0"
+
+"vite@*", "vite@^4.0.0":
   "integrity" "sha512-xevPU7M8FU0i/80DMR+YhgrzR5KS2ORy1B4xcX/cXLsvnUWvfHuqMmVU6N0YiJ4JWGRJJsLCgjEzKjG9/GKoSw=="
   "resolved" "https://registry.npmjs.org/vite/-/vite-4.0.4.tgz"
   "version" "4.0.4"

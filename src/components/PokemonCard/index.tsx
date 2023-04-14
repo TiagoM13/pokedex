@@ -1,17 +1,23 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable prettier/prettier */
 import React from 'react';
 
-import { IPokemonCard } from '../../interfaces/pokemonCard';
-import { getNumberOrderFormat } from '../../utils/getNumberOrderFormat';
+import { IPokemonCard } from '@interfaces/pokemonCard';
+import { getNumberOrderFormat } from '@utils/getNumberOrderFormat';
+
 import {
   getTypesToBackgroundColor,
   getTypesToIconsTypes,
 } from '../../utils/getTheme';
 import { TypeCard } from '../TypeCard';
 
-export const PokemonCard = ({ name, id, types, url_img, getSelectedPokemon }: IPokemonCard) => {
+export const PokemonCard = ({
+  name,
+  id,
+  types,
+  url_img,
+  getSelectedPokemon,
+}: IPokemonCard) => {
   return (
     <>
       <li
@@ -25,7 +31,9 @@ export const PokemonCard = ({ name, id, types, url_img, getSelectedPokemon }: IP
       >
         <div className="py-4 px-1">
           <div className="flex flex-col">
-            <h3 className="font-black line-clamp-1 text-sm capitalize">{name}</h3>
+            <h3 className="font-black line-clamp-1 text-sm capitalize">
+              {name}
+            </h3>
             <span className="font-semibold text-xs">
               {getNumberOrderFormat(id)}
             </span>
@@ -35,10 +43,13 @@ export const PokemonCard = ({ name, id, types, url_img, getSelectedPokemon }: IP
               return (
                 <TypeCard
                   key={type.type.name}
-                  icon={`${type.type.name && getTypesToIconsTypes(type.type.name.toUpperCase())}`}
+                  icon={`${
+                    type.type.name &&
+                    getTypesToIconsTypes(type.type.name.toUpperCase())
+                  }`}
                   type={type.type.name}
                 />
-              )
+              );
             })}
           </div>
         </div>

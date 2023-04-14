@@ -1,9 +1,8 @@
 import React from 'react';
 import Modal from 'react-modal';
 
+import { IModal } from '@interfaces/modal';
 import { X } from 'phosphor-react';
-
-import { IModal } from '../../interfaces/modal';
 
 export const ContentModal = ({ active, children, onCloseModal }: IModal) => {
   return (
@@ -15,7 +14,7 @@ export const ContentModal = ({ active, children, onCloseModal }: IModal) => {
     >
       <button
         type="button"
-        className="absolute right-2 top-2 text-white hover:brightness-75"
+        className="absolute right-2 top-2 text-white hover:brightness-90"
         onClick={onCloseModal}
       >
         <X size={25} weight="bold" />

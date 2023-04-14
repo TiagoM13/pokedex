@@ -1,6 +1,4 @@
-/* eslint-disable no-restricted-syntax */
-/* eslint-disable consistent-return */
-import { THEME } from '../theme/theme';
+import { THEME } from '@theme/theme';
 
 export const getTypesToColor = (type: string) => {
   for (const [key, color] of Object.entries(THEME.COLORS)) {

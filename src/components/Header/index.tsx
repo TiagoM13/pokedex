@@ -1,11 +1,9 @@
-/* eslint-disable no-restricted-syntax */
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import Pikachu from '@assets/img/pikachu-2.png';
+import Logo from '@assets/logo/logo.png';
 import { ArrowLeft } from 'phosphor-react';
-
-import Pikachu from '../../assets/img/pikachu-2.png';
-import Logo from '../../assets/logo/logo.png';
 
 export const Header = () => {
   return (

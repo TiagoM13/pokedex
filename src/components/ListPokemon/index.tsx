@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { usePagination } from '../../hooks/usePagination';
-import { useGetPokemonsData } from '../../hooks/usePokemons';
-import { ListProps } from '../../interfaces/list';
-import { IPokemons } from '../../interfaces/pokemons';
-import { Loading } from '../Loading/Loading';
-import { PokemonCard } from '../PokemonCard';
-import { ShowMoreButton } from '../ShowMoreButton/ShowMoreButton';
+import { Loading } from '@components/Loading/Loading';
+import { PokemonCard } from '@components/PokemonCard';
+import { ShowMoreButton } from '@components/ShowMoreButton/ShowMoreButton';
+import { usePagination } from '@hooks/usePagination';
+import { useGetPokemonsData } from '@hooks/usePokemons';
+import { ListProps } from '@interfaces/list';
+import { IPokemons } from '@interfaces/pokemons';
 
 export const ListPokemon = ({ data, handleSelectedId }: ListProps) => {
   const itemsPerPage = 20;

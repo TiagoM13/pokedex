@@ -1,26 +1,33 @@
-/* eslint-disable prettier/prettier */
 import React from 'react';
 import { AiOutlineColumnHeight } from 'react-icons/ai';
 import { CgPokemon } from 'react-icons/cg';
 import { FaWeightHanging } from 'react-icons/fa';
 import { ImStatsBars } from 'react-icons/im';
 
-import { ICardDatails } from '../../interfaces/cardDatails';
-import { getNumberOrderFormat } from '../../utils/getNumberOrderFormat';
-import { getTypesToBackgroundColor, getTypesToIconsTypes } from '../../utils/getTheme';
-import { TypeCard } from '../TypeCard';
+import { TypeCard } from '@components/TypeCard';
+import { ICardDatails } from '@interfaces/cardDatails';
+import { formatHeightWeight } from '@utils/formatHeightWeight';
+import { getNumberOrderFormat } from '@utils/getNumberOrderFormat';
+import {
+  getTypesToBackgroundColor,
+  getTypesToIconsTypes,
+} from '@utils/getTheme';
 
-const formatHeightWeight = (value: number) => {
-  const format = value / 10;
-  return format;
-}
-
-export const CardDetails = ({ id, name, img, types, weight, height, abilities, stats }: ICardDatails) => {
+export const CardDetails = ({
+  id,
+  name,
+  img,
+  types,
+  weight,
+  height,
+  abilities,
+  stats,
+}: ICardDatails) => {
   return (
     <div className="bg-white w-[400px] mx-auto rounded-2xl border border-zinc-300 overflow-hidden">
       <div
         style={{
-          backgroundColor: types![0].type.name
+          backgroundColor: id!
             ? getTypesToBackgroundColor(types![0].type.name.toUpperCase())
             : '#9d9b9b',
         }}
@@ -35,18 +42,24 @@ export const CardDetails = ({ id, name, img, types, weight, height, abilities, s
         <strong className="text-2xl font-medium leading-tight capitalize">
           {name}
         </strong>
-        <span className="text-lg font-semibold text-zinc-500">{getNumberOrderFormat(id!)}</span>
+        <span className="text-lg font-semibold text-zinc-500">
+          {getNumberOrderFormat(id!)}
+        </span>
       </div>
 
       <div className="flex items-center gap-2 py-4 px-4">
         {types?.map((type, index) => {
           return (
-            <div key={`${type.type.name}-${index}`} className="font-semibold text-white text-[14px]">
+            <div
+              key={`${type.type.name}-${index}`}
+              className="font-semibold text-white text-[14px]"
+            >
               <TypeCard
                 type={type.type.name}
-                icon={`${type.type.name &&
+                icon={`${
+                  type.type.name &&
                   getTypesToIconsTypes(type.type.name.toUpperCase())
-                  }`}
+                }`}
               />
             </div>
           );
@@ -55,7 +68,7 @@ export const CardDetails = ({ id, name, img, types, weight, height, abilities, s
 
       <div className="flex items-center justify-between px-4 my-2">
         <div className="w-full px-2">
-          <h3 className='flex items-center text-sm font-semibold text-zinc-500 gap-2 mb-1 uppercase'>
+          <h3 className="flex items-center text-sm font-semibold text-zinc-500 gap-2 mb-1 uppercase">
             <FaWeightHanging size={15} className="text-zinc-500" />
             Peso:
           </h3>
@@ -68,22 +81,18 @@ export const CardDetails = ({ id, name, img, types, weight, height, abilities, s
         </div>
 
         <div className="w-full px-2">
-          <h3 className='flex items-center text-sm font-semibold text-zinc-500 gap-2 mb-1 uppercase'>
+          <h3 className="flex items-center text-sm font-semibold text-zinc-500 gap-2 mb-1 uppercase">
             <AiOutlineColumnHeight size={15} className="text-zinc-500" />
             Altura:
           </h3>
           <div className="text-center font-medium border border-zinc-300 rounded-lg py-2 px-3">
-            <span className="text-base">
-              {formatHeightWeight(height)}
-              m
-            </span>
+            <span className="text-base">{formatHeightWeight(height)}m</span>
           </div>
         </div>
       </div>
 
-
       <div className="flex flex-col justify-center items-center pt-2 px-4">
-        <h3 className='flex items-center text-sm font-semibold text-zinc-500 gap-2 mb-1 uppercase'>
+        <h3 className="flex items-center text-sm font-semibold text-zinc-500 gap-2 mb-1 uppercase">
           <CgPokemon size={20} className="text-zinc-500" />
           Abilities
         </h3>
@@ -93,7 +102,9 @@ export const CardDetails = ({ id, name, img, types, weight, height, abilities, s
             return (
               <div key={`${ability.ability.name}-${index}`}>
                 <div className="text-center border border-zinc-300 rounded-lg py-2 px-3">
-                  <span className="text-base capitalize">{ability.ability.name}</span>
+                  <span className="text-base capitalize">
+                    {ability.ability.name}
+                  </span>
                 </div>
               </div>
             );
@@ -114,7 +125,7 @@ export const CardDetails = ({ id, name, img, types, weight, height, abilities, s
               {/* <ProgressBar /> */}
               <span>{stats.base_stat}</span>
             </div>
-          )
+          );
         })}
       </div>
     </div>

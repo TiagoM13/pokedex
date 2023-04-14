@@ -1,8 +1,8 @@
 import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 
-import Home from '../pages/Home';
-import Pokedex from '../pages/Pokedex';
+import Home from '@pages/Home';
+import Pokedex from '@pages/Pokedex';
 
 const router = createBrowserRouter([
   {

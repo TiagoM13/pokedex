@@ -4,7 +4,7 @@ import { CgPokemon } from 'react-icons/cg';
 import { FaWeightHanging } from 'react-icons/fa';
 import { ImStatsBars } from 'react-icons/im';
 
-import { TypeCard } from '@components/TypeCard';
+import { TypeCard } from '@components/TypeCard/TypeCard';
 import { ICardDatails } from '@interfaces/cardDatails';
 import { formatHeightWeight } from '@utils/formatHeightWeight';
 import { getNumberOrderFormat } from '@utils/getNumberOrderFormat';

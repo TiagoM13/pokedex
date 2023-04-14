@@ -2,14 +2,13 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
 
+import { TypeCard } from '@components/TypeCard/TypeCard';
 import { IPokemonCard } from '@interfaces/pokemonCard';
 import { getNumberOrderFormat } from '@utils/getNumberOrderFormat';
-
 import {
   getTypesToBackgroundColor,
   getTypesToIconsTypes,
-} from '../../utils/getTheme';
-import { TypeCard } from '../TypeCard';
+} from '@utils/getTheme';
 
 export const PokemonCard = ({
   name,

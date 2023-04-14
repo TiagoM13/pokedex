@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Loading } from '@components/Loading/Loading';
-import { PokemonCard } from '@components/PokemonCard';
+import { PokemonCard } from '@components/PokemonCard/PokemonCard';
 import { ShowMoreButton } from '@components/ShowMoreButton/ShowMoreButton';
 import { usePagination } from '@hooks/usePagination';
 import { useGetPokemonsData } from '@hooks/usePokemons';

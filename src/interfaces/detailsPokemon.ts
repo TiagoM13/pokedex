@@ -1,4 +1,4 @@
-import { ISprites } from './pokemons';
+import { ISprites } from '@interfaces/pokemons';
 
 export interface detailsPokemon {
   id: number;

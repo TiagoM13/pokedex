@@ -1,9 +1,8 @@
 import React from 'react';
 import Modal from 'react-modal';
 
+import { IModal } from '@interfaces/modal';
 import { X } from 'phosphor-react';
-
-import { IModal } from '../../interfaces/modal';
 
 export const ContentModal = ({ active, children, onCloseModal }: IModal) => {
   return (

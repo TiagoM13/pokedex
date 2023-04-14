@@ -3,8 +3,8 @@ import { CgPokemon } from 'react-icons/cg';
 import { MdCatchingPokemon } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 
-import img from '../assets/img/Charizard-Pokemon.png';
-import { SocialMedia } from '../components/SocialMedia/SocialMedia';
+import img from '@assets/img/Charizard-Pokemon.png';
+import { SocialMedia } from '@components/SocialMedia/SocialMedia';
 
 const Home: React.FC = () => {
   return (

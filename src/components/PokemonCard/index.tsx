@@ -1,10 +1,10 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable prettier/prettier */
 import React from 'react';
 
-import { IPokemonCard } from '../../interfaces/pokemonCard';
-import { getNumberOrderFormat } from '../../utils/getNumberOrderFormat';
+import { IPokemonCard } from '@interfaces/pokemonCard';
+import { getNumberOrderFormat } from '@utils/getNumberOrderFormat';
+
 import {
   getTypesToBackgroundColor,
   getTypesToIconsTypes,

@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 
-import { detailsPokemon } from '../interfaces/detailsPokemon';
-import { api } from '../lib/axios';
+import { detailsPokemon } from '@interfaces/detailsPokemon';
+import { api } from '@lib/axios';
 
 export const useSelectPokemon = () => {
   const [active, setActive] = useState(false);

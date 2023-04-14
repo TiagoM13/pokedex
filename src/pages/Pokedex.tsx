@@ -1,14 +1,14 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-import { CardDetails } from '../components/CardDetails/CardDetails';
-import { Footer } from '../components/Footer/Footer';
-import { Header } from '../components/Header';
-import { InputSearch } from '../components/InputSearch/InputSearch';
-import { ListPokemon } from '../components/ListPokemon';
-import { ContentModal } from '../components/Modal';
-import { useGetPokemonsData } from '../hooks/usePokemons';
-import { useSelectPokemon } from '../hooks/useSelectPokemon';
+import { CardDetails } from '@components/CardDetails/CardDetails';
+import { Footer } from '@components/Footer/Footer';
+import { Header } from '@components/Header';
+import { InputSearch } from '@components/InputSearch/InputSearch';
+import { ListPokemon } from '@components/ListPokemon';
+import { ContentModal } from '@components/Modal';
+import { useGetPokemonsData } from '@hooks/usePokemons';
+import { useSelectPokemon } from '@hooks/useSelectPokemon';
 
 const Pokedex: React.FC = () => {
   const { pokemons, FilterPokemon } = useGetPokemonsData();

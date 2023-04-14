@@ -1,22 +1,17 @@
-/* eslint-disable prettier/prettier */
 import React from 'react';
 import { AiOutlineColumnHeight } from 'react-icons/ai';
 import { CgPokemon } from 'react-icons/cg';
 import { FaWeightHanging } from 'react-icons/fa';
 import { ImStatsBars } from 'react-icons/im';
 
-import { ICardDatails } from '../../interfaces/cardDatails';
-import { getNumberOrderFormat } from '../../utils/getNumberOrderFormat';
+import { TypeCard } from '@components/TypeCard';
+import { ICardDatails } from '@interfaces/cardDatails';
+import { formatHeightWeight } from '@utils/formatHeightWeight';
+import { getNumberOrderFormat } from '@utils/getNumberOrderFormat';
 import {
   getTypesToBackgroundColor,
   getTypesToIconsTypes,
-} from '../../utils/getTheme';
-import { TypeCard } from '../TypeCard';
-
-const formatHeightWeight = (value: number) => {
-  const format = value / 10;
-  return format;
-};
+} from '@utils/getTheme';
 
 export const CardDetails = ({
   id,

@@ -30,6 +30,7 @@
     "no-underscore-dangle": "off",
     "no-bitwise": "off",
     "prettier/prettier": "error",
+    "react/jsx-one-expression-per-line": "off",
     "react/no-unknown-property": [2, { "ignore": ["class", "for"] }],
     "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
     "no-use-before-define": "off",

@@ -44,6 +44,7 @@ const Pokedex: React.FC = () => {
             weight={itemDetails?.weight!}
             height={itemDetails?.height!}
             abilities={itemDetails?.abilities!}
+            stats={itemDetails?.stats}
           />
         )}
       </ContentModal>

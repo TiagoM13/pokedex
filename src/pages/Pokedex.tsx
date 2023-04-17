@@ -1,12 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-import { CardDetails } from '@components/CardDetails/CardDetails';
+import { DetailsCard } from '@components/DetailsCard/DetailsCard';
 import { Footer } from '@components/Footer/Footer';
-import { Header } from '@components/Header';
+import { Header } from '@components/Header/Header';
 import { InputSearch } from '@components/InputSearch/InputSearch';
-import { ListPokemon } from '@components/ListPokemon';
-import { ContentModal } from '@components/Modal';
+import { ListPokemon } from '@components/ListPokemon/ListPokemon';
+import { ContentModal } from '@components/Modal/Modal';
 import { useGetPokemonsData } from '@hooks/usePokemons';
 import { useSelectPokemon } from '@hooks/useSelectPokemon';
 
@@ -36,7 +36,7 @@ const Pokedex: React.FC = () => {
 
       <ContentModal active={active} onCloseModal={handleOnToggleModal}>
         {selectedItemId && (
-          <CardDetails
+          <DetailsCard
             id={itemDetails?.id}
             name={itemDetails?.name}
             types={itemDetails?.types}
@@ -44,6 +44,7 @@ const Pokedex: React.FC = () => {
             weight={itemDetails?.weight!}
             height={itemDetails?.height!}
             abilities={itemDetails?.abilities!}
+            stats={itemDetails?.stats}
           />
         )}
       </ContentModal>

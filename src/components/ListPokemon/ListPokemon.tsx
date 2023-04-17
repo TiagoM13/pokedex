@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Loading } from '@components/Loading/Loading';
-import { PokemonCard } from '@components/PokemonCard';
+import { PokemonCard } from '@components/PokemonCard/PokemonCard';
 import { ShowMoreButton } from '@components/ShowMoreButton/ShowMoreButton';
 import { usePagination } from '@hooks/usePagination';
 import { useGetPokemonsData } from '@hooks/usePokemons';
@@ -21,7 +21,7 @@ export const ListPokemon = ({ data, handleSelectedId }: ListProps) => {
       {loading ? (
         <Loading />
       ) : (
-        <ul className="grid grid-cols-6 gap-1 justify-items-center mt-8">
+        <ul className="max-w-[1320px] grid grid-cols-6 gap-2 justify-items-center mt-8 px-2 mx-auto">
           {currentItems.map((pokemon) => {
             return (
               <PokemonCard

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-import { CardDetails } from '@components/CardDetails/CardDetails';
+import { DetailsCard } from '@components/DetailsCard/DetailsCard';
 import { Footer } from '@components/Footer/Footer';
 import { Header } from '@components/Header/Header';
 import { InputSearch } from '@components/InputSearch/InputSearch';
@@ -36,7 +36,7 @@ const Pokedex: React.FC = () => {
 
       <ContentModal active={active} onCloseModal={handleOnToggleModal}>
         {selectedItemId && (
-          <CardDetails
+          <DetailsCard
             id={itemDetails?.id}
             name={itemDetails?.name}
             types={itemDetails?.types}

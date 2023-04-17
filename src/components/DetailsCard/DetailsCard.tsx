@@ -15,7 +15,7 @@ import { BaseStats } from './components/BaseStats/BaseStats';
 import { InfoBox } from './components/InfoBox/InfoBox';
 import { Tabs } from './components/Tabs/Tabs';
 
-export const CardDetails = ({
+export const DetailsCard = ({
   id,
   name,
   img,

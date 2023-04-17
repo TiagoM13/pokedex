@@ -13,6 +13,7 @@ import {
 import { AbilitiesCard } from './components/AbilitiesCard/AbilitiesCard';
 import { BaseStats } from './components/BaseStats/BaseStats';
 import { InfoBox } from './components/InfoBox/InfoBox';
+import { Tabs } from './components/Tabs/Tabs';
 
 export const CardDetails = ({
   id,
@@ -24,6 +25,14 @@ export const CardDetails = ({
   abilities,
   stats,
 }: ICardDatails) => {
+  const [select, setSelect] = React.useState(true);
+  const [selectTwo, setSelectTwo] = React.useState(false);
+
+  const handleClick = () => {
+    setSelect(!select);
+    setSelectTwo(!selectTwo);
+  };
+
   return (
     <div className="bg-white w-[400px] mx-auto rounded-2xl border border-zinc-300 overflow-hidden">
       {/* image pokémon */}
@@ -45,18 +54,18 @@ export const CardDetails = ({
         <strong className="text-2xl font-medium leading-tight capitalize">
           {name}
         </strong>
-        <span className="text-lg font-semibold text-zinc-500">
+        <span className="text-sm font-semibold text-zinc-500">
           {getNumberOrderFormat(id!)}
         </span>
       </div>
 
       {/* types pokémon */}
-      <div className="flex items-center gap-2 py-4 px-4">
+      <div className="flex items-center gap-2 py-2 px-4">
         {types?.map((type, index) => {
           return (
             <div
               key={`${type.type.name}-${index}`}
-              className="font-semibold text-white text-[14px]"
+              className="font-semibold text-white text-[12px]"
             >
               <TypeCard
                 type={type.type.name}
@@ -70,28 +79,37 @@ export const CardDetails = ({
         })}
       </div>
 
-      {/* info pokémon */}
-      <div className="flex items-center justify-between px-4 my-2">
-        <InfoBox
-          text="Peso"
-          value={weight}
-          unity="kg"
-          icon={<FaWeightHanging size={15} className="text-zinc-500" />}
-        />
+      {/* nav tabs */}
+      <Tabs select={select} selectTwo={selectTwo} onSelect={handleClick} />
 
-        <InfoBox
-          text="Altura"
-          value={height}
-          unity="m"
-          icon={<AiOutlineColumnHeight size={15} className="text-zinc-500" />}
-        />
-      </div>
+      {select && (
+        <div className="mb-4">
+          {/* info pokémon */}
+          <div className="flex items-center justify-between px-4 my-2">
+            <InfoBox
+              text="Peso"
+              value={weight}
+              unity="kg"
+              icon={<FaWeightHanging size={15} className="text-zinc-500" />}
+            />
 
-      {/* abilities */}
-      <AbilitiesCard abilities={abilities} />
+            <InfoBox
+              text="Altura"
+              value={height}
+              unity="m"
+              icon={
+                <AiOutlineColumnHeight size={15} className="text-zinc-500" />
+              }
+            />
+          </div>
+
+          {/* abilities */}
+          <AbilitiesCard abilities={abilities} />
+        </div>
+      )}
 
       {/* base stats */}
-      <BaseStats stats={stats} />
+      {selectTwo && <BaseStats stats={stats} />}
     </div>
   );
 };

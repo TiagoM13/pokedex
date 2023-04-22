@@ -1,6 +1,4 @@
 import React from 'react';
-import { AiOutlineColumnHeight } from 'react-icons/ai';
-import { FaWeightHanging } from 'react-icons/fa';
 
 import { TypeCard } from '@components/TypeCard/TypeCard';
 import { ICardDatails } from '@interfaces/cardDatails';
@@ -10,10 +8,9 @@ import {
   getTypesToIconsTypes,
 } from '@utils/getTheme';
 
-import { AbilitiesCard } from './components/AbilitiesCard/AbilitiesCard';
 import { BaseStats } from './components/BaseStats/BaseStats';
-import { InfoBox } from './components/InfoBox/InfoBox';
-import { Tabs } from './components/Tabs/Tabs';
+import { InfoCard } from './components/InfoCard/InfoCard';
+import { Tab } from './components/Tab/Tab';
 
 export const DetailsCard = ({
   id,
@@ -75,13 +72,13 @@ export const DetailsCard = ({
 
       {/* nav tabs */}
       <div className="flex border-b border-zinc-300 mx-4">
-        <Tabs
+        <Tab
           title="Info"
           isActive={select === 'open'}
           status="open"
           onClick={() => setSelect('open')}
         />
-        <Tabs
+        <Tab
           title="Stats"
           isActive={select === 'closed'}
           status="closed"
@@ -89,30 +86,15 @@ export const DetailsCard = ({
         />
       </div>
 
+      {/* navigation screens */}
       {select === 'open' ? (
-        <div className="mb-4">
-          {/* info pokémon */}
-          <div className="flex items-center justify-between px-4 my-2">
-            <InfoBox
-              text="Peso"
-              value={weight}
-              unity="kg"
-              icon={<FaWeightHanging size={15} className="text-zinc-500" />}
-            />
-
-            <InfoBox
-              text="Altura"
-              value={height}
-              unity="m"
-              icon={
-                <AiOutlineColumnHeight size={15} className="text-zinc-500" />
-              }
-            />
-          </div>
-
-          {/* abilities */}
-          <AbilitiesCard abilities={abilities} />
-        </div>
+        <InfoCard
+          info={{
+            height,
+            weight,
+            abilities,
+          }}
+        />
       ) : (
         <BaseStats stats={stats} />
       )}

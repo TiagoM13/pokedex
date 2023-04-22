@@ -25,13 +25,7 @@ export const DetailsCard = ({
   abilities,
   stats,
 }: ICardDatails) => {
-  const [select, setSelect] = React.useState(true);
-  const [selectTwo, setSelectTwo] = React.useState(false);
-
-  const handleClick = () => {
-    setSelect(!select);
-    setSelectTwo(!selectTwo);
-  };
+  const [select, setSelect] = React.useState<'open' | 'closed'>('open');
 
   return (
     <div className="bg-white w-[400px] mx-auto rounded-2xl border border-zinc-300 overflow-hidden">
@@ -80,9 +74,22 @@ export const DetailsCard = ({
       </div>
 
       {/* nav tabs */}
-      <Tabs select={select} selectTwo={selectTwo} onSelect={handleClick} />
+      <div className="flex border-b border-zinc-300 mx-4">
+        <Tabs
+          title="Info"
+          isActive={select === 'open'}
+          status="open"
+          onClick={() => setSelect('open')}
+        />
+        <Tabs
+          title="Stats"
+          isActive={select === 'closed'}
+          status="closed"
+          onClick={() => setSelect('closed')}
+        />
+      </div>
 
-      {select && (
+      {select === 'open' ? (
         <div className="mb-4">
           {/* info pokémon */}
           <div className="flex items-center justify-between px-4 my-2">
@@ -106,10 +113,9 @@ export const DetailsCard = ({
           {/* abilities */}
           <AbilitiesCard abilities={abilities} />
         </div>
+      ) : (
+        <BaseStats stats={stats} />
       )}
-
-      {/* base stats */}
-      {selectTwo && <BaseStats stats={stats} />}
     </div>
   );
 };

@@ -1,17 +1,12 @@
 import React from 'react';
 
-type TabsProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
+type TabProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   title: string;
   isActive?: boolean;
   status: 'open' | 'closed';
 };
 
-export const Tabs = ({
-  title,
-  isActive = false,
-  status,
-  ...rest
-}: TabsProps) => {
+export const Tab = ({ title, isActive = false, status, ...rest }: TabProps) => {
   return (
     <button
       {...rest}

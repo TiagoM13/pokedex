@@ -7,9 +7,9 @@ import { ProgressBar } from '../ProgressBar/ProgressBar';
 
 export const BaseStats = ({ stats }: IBaseStats) => {
   return (
-    <div className="flex flex-col items-center pt-4 pb-8">
-      <h3 className="flex items-center text-sm font-semibold text-zinc-500 gap-2 mb-1 uppercase">
-        <ImStatsBars size={15} className="text-zinc-500" />
+    <div className="flex flex-col items-center py-4">
+      <h3 className="flex items-center text-sm font-semibold text-zinc-600 gap-2 mb-1 uppercase">
+        <ImStatsBars size={15} className="text-zinc-600" />
         Base Stats
       </h3>
       {stats?.map((stat, index) => {

@@ -1,9 +1,8 @@
 /* eslint-disable no-restricted-syntax */
 import { useEffect, useState } from 'react';
 
+import { IPokemons } from '@interfaces/pokemons';
 import axios from 'axios';
-
-import { IPokemons } from '../interfaces/pokemons';
 
 export const useGetPokemonsData = () => {
   const [loading, setLoading] = useState(false);

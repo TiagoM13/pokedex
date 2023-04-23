@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Logo from '../../assets/logo/pokemon-logo.svg';
-import { SocialMedia } from '../SocialMedia/SocialMedia';
+import Logo from '@assets/logo/pokemon-logo.svg';
+import { SocialMedia } from '@components/SocialMedia/SocialMedia';
 
 export const Footer: React.FC = () => {
   return (

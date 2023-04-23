@@ -93,7 +93,8 @@
     "tailwindcss": "^3.2.4",
     "ts-jest": "^26.5.4",
     "typescript": "^4.9.3",
-    "vite": "^4.0.0"
+    "vite": "^4.0.0",
+    "vite-tsconfig-paths": "^4.2.0"
   },
   "baseUrl": "./node_modules/@types",
   "typeRoots": [

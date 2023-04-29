@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
+import { Button } from '@components/Button/Button';
 import { DetailsCard } from '@components/DetailsCard/DetailsCard';
 import { Footer } from '@components/Footer/Footer';
 import { Header } from '@components/Header/Header';
@@ -48,6 +49,8 @@ const Pokedex: React.FC = () => {
           />
         )}
       </ContentModal>
+
+      <Button />
     </>
   );
 };

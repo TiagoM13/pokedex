@@ -8,9 +8,7 @@ import {
   getTypesToIconsTypes,
 } from '@utils/getTheme';
 
-import { BaseStats } from './components/BaseStats/BaseStats';
-import { InfoCard } from './components/InfoCard/InfoCard';
-import { Tab } from './components/Tab/Tab';
+import { BaseStats, InfoCard, Tab } from './components';
 
 export const DetailsCard = ({
   id,

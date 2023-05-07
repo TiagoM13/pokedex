@@ -3,13 +3,12 @@ import { AiOutlineColumnHeight } from 'react-icons/ai';
 import { CgPokemon } from 'react-icons/cg';
 import { FaWeightHanging } from 'react-icons/fa';
 
-import { InfoCardProps } from '@interfaces/infoCard';
+import { IInfoCardProps } from '@interfaces/infoCard';
 import { formatHeightWeight } from '@utils/formatHeightWeight';
 
-import { Box } from '../Box/Box';
-import { InfoBox } from '../InfoBox/InfoBox';
+import { Box, InfoBox } from '..';
 
-export const InfoCard = ({ info }: InfoCardProps) => {
+export const InfoCard = ({ info }: IInfoCardProps) => {
   return (
     <div className="grid grid-cols-2 py-4 px-2">
       <div className="flex flex-1 flex-col items-center border-r border-zinc-300">

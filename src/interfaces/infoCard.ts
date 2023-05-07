@@ -1,4 +1,4 @@
-export interface InfoCardProps {
+export interface IInfoCardProps {
   info: {
     weight: number;
     height: number;

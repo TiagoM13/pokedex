@@ -5,10 +5,10 @@ import { PokemonCard } from '@components/PokemonCard/PokemonCard';
 import { ShowMoreButton } from '@components/ShowMoreButton/ShowMoreButton';
 import { usePagination } from '@hooks/usePagination';
 import { useGetPokemonsData } from '@hooks/usePokemons';
-import { ListProps } from '@interfaces/list';
+import { IListPokemons } from '@interfaces/list';
 import { IPokemons } from '@interfaces/pokemons';
 
-export const ListPokemon = ({ data, handleSelectedId }: ListProps) => {
+export const ListPokemon = ({ data, handleSelectedId }: IListPokemons) => {
   const itemsPerPage = 20;
   const { loading } = useGetPokemonsData();
   const { currentItems, showMoreItems, loadItems } = usePagination<IPokemons>({

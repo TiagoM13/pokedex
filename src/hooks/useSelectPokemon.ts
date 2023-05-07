@@ -1,12 +1,12 @@
 import React, { useCallback, useEffect, useState } from 'react';
 
-import { detailsPokemon } from '@interfaces/detailsPokemon';
+import { IDetailsPokemon } from '@interfaces/detailsPokemon';
 import { api } from '@lib/axios';
 
 export const useSelectPokemon = () => {
   const [active, setActive] = useState(false);
   const [selectedItemId, setSelectedItemId] = useState<number | null>(null);
-  const [itemDetails, setItemDetails] = useState<detailsPokemon | null>(null);
+  const [itemDetails, setItemDetails] = useState<IDetailsPokemon | null>(null);
 
   useEffect(() => {
     if (selectedItemId) {

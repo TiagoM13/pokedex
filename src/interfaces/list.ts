@@ -1,4 +1,4 @@
-import { IPokemons } from '@interfaces/pokemons';
+import { IPokemons } from '.';
 
 export type IListPokemons = {
   data: IPokemons[];

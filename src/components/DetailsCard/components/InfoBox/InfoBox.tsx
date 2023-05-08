@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { IInfoBox } from '@interfaces/index';
+import { IInfoBox } from '@interfaces';
 
 export const InfoBox = ({ title, icon, component }: IInfoBox) => {
   return (

@@ -9,8 +9,8 @@ import {
   Header,
   InputSearch,
   ListPokemon,
-} from '@components/index';
-import { useGetPokemonsData, useSelectPokemon } from '@hooks/index';
+} from '@components';
+import { useGetPokemonsData, useSelectPokemon } from '@hooks';
 
 const Pokedex = () => {
   const { pokemons, FilterPokemon } = useGetPokemonsData();
@@ -56,4 +56,4 @@ const Pokedex = () => {
   );
 };
 
-export default Pokedex;
+export { Pokedex };

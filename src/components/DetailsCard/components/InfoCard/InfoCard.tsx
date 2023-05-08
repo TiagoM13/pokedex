@@ -3,8 +3,8 @@ import { AiOutlineColumnHeight } from 'react-icons/ai';
 import { CgPokemon } from 'react-icons/cg';
 import { FaWeightHanging } from 'react-icons/fa';
 
-import { IInfoCardProps } from '@interfaces/index';
-import { formatHeightWeight } from '@utils/index';
+import { IInfoCardProps } from '@interfaces';
+import { formatHeightWeight } from '@utils';
 
 import { Box, InfoBox } from '..';
 

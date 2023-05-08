@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { useGetPokemonsData, usePagination } from '@hooks/index';
-import { IListPokemons, IPokemons } from '@interfaces/index';
+import { useGetPokemonsData, usePagination } from '@hooks';
+import { IListPokemons, IPokemons } from '@interfaces';
 
 import { Loading, PokemonCard, ShowMoreButton } from '..';
 

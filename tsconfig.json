@@ -18,14 +18,14 @@
     "baseUrl": "./src",
     "paths": {
       "@assets/*": ["./assets/*"],
-      "@components/*": ["./components/*"],
-      "@hooks/*": ["./hooks/*"],
-      "@interfaces/*": ["./interfaces/*"],
-      "@routes/*": ["./routes/*"],
-      "@pages/*": ["./pages/*"],
-      "@utils/*": ["./utils/*"],
-      "@lib/*": ["./lib/*"],
-      "@theme/*": ["./theme/*"]
+      "@components": ["./components/index"],
+      "@hooks": ["./hooks/index"],
+      "@interfaces": ["./interfaces/index"],
+      "@routes": ["./routes/index"],
+      "@pages": ["./pages/index"],
+      "@utils": ["./utils/index"],
+      "@lib": ["./lib/index"],
+      "@theme": ["./theme/index"]
     },
     "typeRoots": ["node_modules/@types", "./types"]
   },

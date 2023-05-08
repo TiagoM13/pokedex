@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { IPagination, IPaginationReturn } from '@interfaces/pagination';
+import { IPagination, IPaginationReturn } from '@interfaces/index';
 
 export const usePagination = <T>({
   data,

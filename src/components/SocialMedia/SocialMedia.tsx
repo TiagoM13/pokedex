@@ -1,7 +1,8 @@
 import React from 'react';
 
-import { Anchor } from '@components/Anchor/Anchor';
 import { GithubLogo, LinkedinLogo, TwitterLogo } from 'phosphor-react';
+
+import { Anchor } from '..';
 
 export const SocialMedia: React.FC = () => {
   return (

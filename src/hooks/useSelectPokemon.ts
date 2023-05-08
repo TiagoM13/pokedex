@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 
-import { IDetailsPokemon } from '@interfaces/detailsPokemon';
+import { IDetailsPokemon } from '@interfaces/index';
 import { api } from '@lib/axios';
 
 export const useSelectPokemon = () => {

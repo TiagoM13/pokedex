@@ -1,7 +1,7 @@
 import React from 'react';
 import { ImStatsBars } from 'react-icons/im';
 
-import { IBaseStats } from '@interfaces/baseStats';
+import { IBaseStats } from '@interfaces/index';
 
 import { ProgressBar } from '..';
 

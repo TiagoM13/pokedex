@@ -1,7 +1,7 @@
 /* eslint-disable no-restricted-syntax */
 import { useEffect, useState } from 'react';
 
-import { IPokemons } from '@interfaces/pokemons';
+import { IPokemons } from '@interfaces/index';
 import axios from 'axios';
 
 export const useGetPokemonsData = () => {

@@ -1,14 +1,12 @@
 /* eslint-disable no-restricted-syntax */
 import { useEffect, useState } from 'react';
 
-import { IPokemons } from '@interfaces/pokemons';
+import { IPokemons } from '@interfaces/index';
 import axios from 'axios';
 
 export const useGetPokemonsData = () => {
   const [loading, setLoading] = useState(false);
   const [pokemons, setPokemons] = useState<IPokemons[]>([]);
-
-  // console.log(pokemons);
 
   useEffect(() => {
     setLoading(true);

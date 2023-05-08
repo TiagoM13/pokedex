@@ -4,9 +4,9 @@ import { MdCatchingPokemon } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 
 import img from '@assets/img/Charizard-Pokemon.png';
-import { SocialMedia } from '@components/SocialMedia/SocialMedia';
+import { SocialMedia } from '@components/index';
 
-const Home: React.FC = () => {
+const Home = () => {
   return (
     <div className="bg-orange bg-no-repeat bg-cover w-screen h-screen flex justify-between p-8 relative">
       <div className="flex flex-col justify-center">

@@ -1,16 +1,15 @@
 import React from 'react';
 
-import { TypeCard } from '@components/TypeCard/TypeCard';
-import { ICardDatails } from '@interfaces/cardDatails';
-import { getNumberOrderFormat } from '@utils/getNumberOrderFormat';
+import { ICardDatails } from '@interfaces/index';
 import {
+  getNumberOrderFormat,
   getTypesToBackgroundColor,
   getTypesToIconsTypes,
-} from '@utils/getTheme';
+} from '@utils/index';
 
-import { BaseStats } from './components/BaseStats/BaseStats';
-import { InfoCard } from './components/InfoCard/InfoCard';
-import { Tab } from './components/Tab/Tab';
+import { BaseStats, InfoCard, Tab } from './components';
+
+import { TypeCard } from '..';
 
 export const DetailsCard = ({
   id,

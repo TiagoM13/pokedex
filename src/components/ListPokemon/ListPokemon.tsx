@@ -1,14 +1,11 @@
 import React from 'react';
 
-import { Loading } from '@components/Loading/Loading';
-import { PokemonCard } from '@components/PokemonCard/PokemonCard';
-import { ShowMoreButton } from '@components/ShowMoreButton/ShowMoreButton';
-import { usePagination } from '@hooks/usePagination';
-import { useGetPokemonsData } from '@hooks/usePokemons';
-import { ListProps } from '@interfaces/list';
-import { IPokemons } from '@interfaces/pokemons';
+import { useGetPokemonsData, usePagination } from '@hooks/index';
+import { IListPokemons, IPokemons } from '@interfaces/index';
 
-export const ListPokemon = ({ data, handleSelectedId }: ListProps) => {
+import { Loading, PokemonCard, ShowMoreButton } from '..';
+
+export const ListPokemon = ({ data, handleSelectedId }: IListPokemons) => {
   const itemsPerPage = 20;
   const { loading } = useGetPokemonsData();
   const { currentItems, showMoreItems, loadItems } = usePagination<IPokemons>({

@@ -1,7 +1,7 @@
 import React from 'react';
 import { MdOutlineCatchingPokemon } from 'react-icons/md';
 
-import { IButtonProps } from '@interfaces/button';
+import { IButtonProps } from '@interfaces/index';
 
 export const ShowMoreButton = ({ loadItems, showMoreItems }: IButtonProps) => {
   return (

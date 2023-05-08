@@ -1,12 +1,13 @@
 import React from 'react';
 
-import { TypeCard } from '@components/TypeCard/TypeCard';
-import { IPokemonCard } from '@interfaces/pokemonCard';
-import { getNumberOrderFormat } from '@utils/getNumberOrderFormat';
+import { IPokemonCard } from '@interfaces/index';
 import {
-  getTypesToBackgroundColor,
+  getNumberOrderFormat,
   getTypesToIconsTypes,
-} from '@utils/getTheme';
+  getTypesToBackgroundColor,
+} from '@utils/index';
+
+import { TypeCard } from '..';
 
 export const PokemonCard = ({
   name,

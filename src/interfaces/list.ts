@@ -1,6 +1,6 @@
-import { IPokemons } from '@interfaces/pokemons';
+import { IPokemons } from '.';
 
-export type ListProps = {
+export type IListPokemons = {
   data: IPokemons[];
   handleSelectedId: (id: number) => void;
 };

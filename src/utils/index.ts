@@ -1,3 +1,3 @@
-export * from '@utils/formatHeightWeight';
-export * from '@utils/getNumberOrderFormat';
-export * from '@utils/getTheme';
+export * from './formatHeightWeight';
+export * from './getNumberOrderFormat';
+export * from './getTheme';

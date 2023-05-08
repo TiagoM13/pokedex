@@ -4,7 +4,7 @@ import { MdCatchingPokemon } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 
 import img from '@assets/img/Charizard-Pokemon.png';
-import { SocialMedia } from '@components/index';
+import { SocialMedia } from '@components';
 
 const Home = () => {
   return (
@@ -48,4 +48,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export { Home };

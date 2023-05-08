@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ISearch } from '@interfaces/index';
+import { ISearch } from '@interfaces';
 import { MagnifyingGlass } from 'phosphor-react';
 
 export const InputSearch = ({ getFilterPokemon }: ISearch) => {

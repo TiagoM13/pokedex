@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { ICardDatails } from '@interfaces/index';
+import { ICardDatails } from '@interfaces';
 import {
   getNumberOrderFormat,
   getTypesToBackgroundColor,
   getTypesToIconsTypes,
-} from '@utils/index';
+} from '@utils';
 
 import { BaseStats, InfoCard, Tab } from './components';
 

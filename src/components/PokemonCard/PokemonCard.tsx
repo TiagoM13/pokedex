@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { IPokemonCard } from '@interfaces/index';
+import { IPokemonCard } from '@interfaces';
 import {
   getNumberOrderFormat,
   getTypesToIconsTypes,
   getTypesToBackgroundColor,
-} from '@utils/index';
+} from '@utils';
 
 import { TypeCard } from '..';
 

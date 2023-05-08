@@ -1,4 +1,4 @@
-import { THEME } from '@theme/theme';
+import { THEME } from '@theme';
 
 export const getTypesToColor = (type: string) => {
   for (const [key, color] of Object.entries(THEME.COLORS)) {

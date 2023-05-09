@@ -24,7 +24,7 @@ export const DetailsCard = ({
   const [select, setSelect] = React.useState<'open' | 'closed'>('open');
 
   return (
-    <div className="bg-white w-[400px] mx-auto rounded-2xl border border-zinc-300 overflow-hidden">
+    <div className="bg-white w-[400px] mx-auto rounded-2xl border border-zinc-300 overflow-hidden  screen-1x:max-w-full">
       {/* image pokémon */}
       <div
         style={{
@@ -41,7 +41,7 @@ export const DetailsCard = ({
 
       {/* name pokémon */}
       <div className="w-full flex flex-col justify-between mt-6 px-4">
-        <strong className="text-2xl font-medium leading-tight capitalize">
+        <strong className="text-2xl font-medium leading-tight capitalize screen-xs:text-[22px]">
           {name}
         </strong>
         <span className="text-sm font-semibold text-zinc-500">

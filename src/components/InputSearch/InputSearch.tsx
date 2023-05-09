@@ -10,13 +10,13 @@ export const InputSearch = ({ getFilterPokemon }: ISearch) => {
         <label htmlFor="search" className="text-2xl font-semibold">
           Select your pokemon
         </label>
-        <div className="flex justify-center">
+        <div className="flex justify-center w-[400px] screen-1x:w-screen screen-1x:px-8">
           <input
             onChange={(e) => getFilterPokemon(e.target.value)}
             id="search"
             type="text"
             placeholder="Search pokemons..."
-            className="w-[400px] text-zinc-500 border border-zinc-400 bg-zinc-100 rounded-xl mx-1 py-2 px-2 shadow-sm focus:outline-none focus:border-zinc-600 placeholder:italic placeholder:text-zinc-500"
+            className="w-full text-zinc-500 border border-zinc-400 bg-zinc-100 rounded-xl mx-1 py-2 px-2 shadow-sm focus:outline-none focus:border-zinc-600 placeholder:italic placeholder:text-zinc-500"
           />
           <span className="inline-block px-2 py-3 -ml-10">
             <MagnifyingGlass

@@ -10,7 +10,7 @@ export const ContentModal = ({ active, children, onCloseModal }: IModal) => {
       isOpen={active}
       onRequestClose={onCloseModal}
       overlayClassName="overlay-content"
-      className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-2xl animate-modal"
+      className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-2xl animate-modal screen-1x:max-w-[370px] screen-xs:max-w-[340px]"
     >
       <button
         type="button"

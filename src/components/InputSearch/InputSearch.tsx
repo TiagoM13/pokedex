@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { ISearch } from '@interfaces';
+import { ISearchButton } from '@interfaces';
 import { MagnifyingGlass } from 'phosphor-react';
 
-export const InputSearch = ({ getFilterPokemon }: ISearch) => {
+export const InputSearch = ({ getFilterPokemon }: ISearchButton) => {
   return (
     <div className="flex items-center flex-col gap-2 py-6 px-1 mx-4 mb-2">
       <div className="flex flex-col items-center gap-1 relative">

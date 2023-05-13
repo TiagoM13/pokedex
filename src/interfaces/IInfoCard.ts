@@ -1,7 +1,7 @@
-export interface IInfoCardProps {
+export interface IInfoCard {
   info: {
-    weight: number;
-    height: number;
+    weight?: number;
+    height?: number;
     abilities:
       | {
           ability: {

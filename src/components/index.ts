@@ -11,3 +11,5 @@ export * from './PokemonCard/PokemonCard';
 export * from './ShowMoreButton/ShowMoreButton';
 export * from './SocialMedia/SocialMedia';
 export * from './TypeCard/TypeCard';
+export * from './ImageLazyLoader/ImageLazyLoader';
+export * from './LoadingSkeleton/CardLoadingSkeleton';

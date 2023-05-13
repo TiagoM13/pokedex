@@ -1,24 +1,29 @@
 import React from 'react';
 
+import { LoadingSkeleton, PokemonCard, ShowMoreButton } from '@components';
 import { useGetPokemonsData, usePagination } from '@hooks';
 import { IListPokemons, IPokemons } from '@interfaces';
 
-import { Loading, PokemonCard, ShowMoreButton } from '..';
-
 export const ListPokemon = ({ data, handleSelectedId }: IListPokemons) => {
   const itemsPerPage = 20;
-  const { loading } = useGetPokemonsData();
+  const { loading: isLoadingData } = useGetPokemonsData();
   const { currentItems, showMoreItems, loadItems } = usePagination<IPokemons>({
     data,
     itemsPerPage,
   });
 
+  const isLoading = isLoadingData || currentItems.length === 0;
+
   return (
     <div>
-      {loading ? (
-        <Loading />
+      {isLoading ? (
+        <div className="max-w-[1320px] grid grid-cols-6 gap-2 justify-items-center mt-8 px-2 mx-auto screen-5x:grid-cols-5 screen-4x:grid-cols-4 screen-3x:grid-cols-3 screen-2x:grid-cols-2 screen-1x:grid-cols-1 screen-1x:mx-5">
+          {Array.from({ length: itemsPerPage }).map((_, index) => (
+            <LoadingSkeleton key={index} />
+          ))}
+        </div>
       ) : (
-        <ul className="max-w-[1320px] grid grid-cols-6 gap-2 justify-items-center mt-8 px-2 mx-auto screen-5x:grid-cols-5 screen-4x:grid-cols-4 screen-3x:grid-cols-3 screen-2x:grid-cols-2 screen-1x:grid-cols-1">
+        <ul className="max-w-[1320px] grid grid-cols-6 gap-2 justify-items-center mt-8 px-2 mx-auto screen-5x:grid-cols-5 screen-4x:grid-cols-4 screen-3x:grid-cols-3 screen-2x:grid-cols-2 screen-1x:grid-cols-1 screen-1x:mx-5">
           {currentItems.map((pokemon) => {
             return (
               <PokemonCard

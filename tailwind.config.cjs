@@ -8,7 +8,8 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        orange: "url('./src/assets/background/background_orange.png')",
+        orange:
+          'linear-gradient(to right, #EE7B56, #DD613A, #EA5525, #E7430F,  #D43300)',
       },
       keyframes: {
         modal: {

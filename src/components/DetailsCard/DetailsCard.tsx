@@ -28,7 +28,7 @@ export const DetailsCard = ({
       {/* image pokémon */}
       <div
         style={{
-          backgroundColor: id!
+          backgroundColor: id
             ? getTypesToBackgroundColor(types![0].type.name.toUpperCase())
             : '#9d9b9b',
         }}

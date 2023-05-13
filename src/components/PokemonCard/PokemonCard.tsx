@@ -1,13 +1,12 @@
 import React from 'react';
 
+import { TypeCard, ImageLazyLoader } from '@components';
 import { IPokemonCard } from '@interfaces';
 import {
   getNumberOrderFormat,
   getTypesToIconsTypes,
   getTypesToBackgroundColor,
 } from '@utils';
-
-import { TypeCard } from '..';
 
 export const PokemonCard = ({
   name,
@@ -54,12 +53,7 @@ export const PokemonCard = ({
           </div>
         </div>
         <div className="flex items-center h-full w-full screen-2x:w-auto">
-          <img
-            className="w-full object-cotain overflow-hidden screen-2x:max-w-[200px]"
-            src={url_img}
-            alt={`Pokémon - ${name}`}
-            loading="lazy"
-          />
+          <ImageLazyLoader imageUrl={url_img} name={name} />
         </div>
       </button>
     </li>

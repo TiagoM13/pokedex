@@ -1,3 +1,3 @@
-export interface ISearch {
+export interface ISearchButton {
   getFilterPokemon: (e: string) => void;
 }

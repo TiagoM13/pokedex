@@ -43,9 +43,9 @@ const Pokedex = () => {
             name={itemDetails?.name}
             types={itemDetails?.types}
             img={itemDetails?.sprites.other['official-artwork'].front_default}
-            weight={itemDetails?.weight!}
-            height={itemDetails?.height!}
-            abilities={itemDetails?.abilities!}
+            weight={itemDetails?.weight}
+            height={itemDetails?.height}
+            abilities={itemDetails?.abilities}
             stats={itemDetails?.stats}
           />
         )}

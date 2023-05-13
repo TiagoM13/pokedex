@@ -3,25 +3,25 @@ import { AiOutlineColumnHeight } from 'react-icons/ai';
 import { CgPokemon } from 'react-icons/cg';
 import { FaWeightHanging } from 'react-icons/fa';
 
-import { IInfoCardProps } from '@interfaces';
+import { IInfoCard } from '@interfaces';
 import { formatHeightWeight } from '@utils';
 
 import { Box, InfoBox } from '..';
 
-export const InfoCard = ({ info }: IInfoCardProps) => {
+export const InfoCard = ({ info }: IInfoCard) => {
   return (
     <div className="grid grid-cols-2 py-4 px-2">
       <div className="flex flex-1 flex-col items-center border-r border-zinc-300">
         <InfoBox
           title="Peso"
           icon={<FaWeightHanging size={15} className="text-zinc-600" />}
-          component={<Box text={`${formatHeightWeight(info.weight)} kg`} />}
+          component={<Box text={`${formatHeightWeight(info.weight!)} kg`} />}
         />
 
         <InfoBox
           title="Altura"
           icon={<AiOutlineColumnHeight size={15} className="text-zinc-600" />}
-          component={<Box text={`${formatHeightWeight(info.height)} m`} />}
+          component={<Box text={`${formatHeightWeight(info.height!)} m`} />}
         />
       </div>
 

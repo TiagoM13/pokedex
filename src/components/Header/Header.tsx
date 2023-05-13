@@ -7,7 +7,7 @@ import { ArrowLeft } from 'phosphor-react';
 
 export const Header = () => {
   return (
-    <header className="bg-[#fe6613] pt-4 px-4 h-[310px]">
+    <header className="bg-orange pt-4 px-4 h-[310px]">
       <div className="flex justify-between">
         <Link
           to="/"

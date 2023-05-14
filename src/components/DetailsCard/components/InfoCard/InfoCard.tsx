@@ -15,13 +15,13 @@ export const InfoCard = ({ info }: IInfoCard) => {
         <InfoBox
           title="Peso"
           icon={<FaWeightHanging size={15} className="text-zinc-600" />}
-          component={<Box text={`${formatHeightWeight(info.weight!)} kg`} />}
+          component={<Box text={`${formatHeightWeight(info.weight)} kg`} />}
         />
 
         <InfoBox
           title="Altura"
           icon={<AiOutlineColumnHeight size={15} className="text-zinc-600" />}
-          component={<Box text={`${formatHeightWeight(info.height!)} m`} />}
+          component={<Box text={`${formatHeightWeight(info.height)} m`} />}
         />
       </div>
 

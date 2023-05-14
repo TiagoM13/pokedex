@@ -17,7 +17,7 @@ export const useGetPokemonsData = () => {
     const endpoints = [];
 
     for (let i = 1; i <= 151; i++) {
-      endpoints.push(`${import.meta.env.VITE_URL_API}/${i}`);
+      endpoints.push(`${process.env.VITE_URL_API}/${i}`);
     }
 
     await axios

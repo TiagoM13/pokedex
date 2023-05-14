@@ -1,5 +1,5 @@
 export interface ICardDatails {
-  id?: number;
+  id: number;
   name?: string;
   img?: string;
   types?: {
@@ -19,6 +19,6 @@ export interface ICardDatails {
       name: string;
     };
   }[];
-  weight?: number;
-  height?: number;
+  weight: number;
+  height: number;
 }

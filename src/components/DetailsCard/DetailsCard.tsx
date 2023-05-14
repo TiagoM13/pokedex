@@ -29,7 +29,9 @@ export const DetailsCard = ({
       <div
         style={{
           backgroundColor: id
-            ? getTypesToBackgroundColor(types![0].type.name.toUpperCase())
+            ? getTypesToBackgroundColor(
+                types && types[0].type.name.toUpperCase()
+              )
             : '#9d9b9b',
         }}
         className="bg-zinc-500 flex flex-col items-center text-white px-4 py-4 rounded-b-[50%]"
@@ -45,7 +47,7 @@ export const DetailsCard = ({
           {name}
         </strong>
         <span className="text-sm font-semibold text-zinc-500">
-          {getNumberOrderFormat(id!)}
+          {getNumberOrderFormat(id)}
         </span>
       </div>
 

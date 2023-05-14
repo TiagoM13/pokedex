@@ -39,12 +39,12 @@ const Pokedex = () => {
       <ContentModal active={active} onCloseModal={handleOnToggleModal}>
         {selectedItemId && (
           <DetailsCard
-            id={itemDetails?.id}
+            id={itemDetails?.id ?? 0}
             name={itemDetails?.name}
             types={itemDetails?.types}
             img={itemDetails?.sprites.other['official-artwork'].front_default}
-            weight={itemDetails?.weight}
-            height={itemDetails?.height}
+            weight={itemDetails?.weight ?? 0}
+            height={itemDetails?.height ?? 0}
             abilities={itemDetails?.abilities}
             stats={itemDetails?.stats}
           />

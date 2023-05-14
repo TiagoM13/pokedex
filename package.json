@@ -1,6 +1,6 @@
 {
   "name": "pokedex",
-  "description": "project ReactJs",
+  "description": "Pokedex project, listing and selection of pokemons",
   "private": true,
   "version": "0.0.0",
   "type": "commonjs",

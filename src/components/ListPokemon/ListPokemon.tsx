@@ -1,6 +1,11 @@
 import React from 'react';
 
-import { LoadingSkeleton, PokemonCard, ShowMoreButton } from '@components';
+import {
+  LoadingSkeleton,
+  PokemonCard,
+  Separator,
+  ShowMoreButton,
+} from '@components';
 import { useGetPokemonsData, usePagination } from '@hooks';
 import { IListPokemons, IPokemons } from '@interfaces';
 
@@ -15,7 +20,9 @@ export const ListPokemon = ({ data, handleSelectedId }: IListPokemons) => {
   const isLoading = isLoadingData || currentItems.length === 0;
 
   return (
-    <div>
+    <>
+      <Separator loading={isLoading} amount={data.length} />
+
       {isLoading ? (
         <div className="max-w-[1320px] grid grid-cols-6 gap-2 justify-items-center mt-8 px-2 mx-auto screen-5x:grid-cols-5 screen-4x:grid-cols-4 screen-3x:grid-cols-3 screen-2x:grid-cols-2 screen-1x:grid-cols-1 screen-1x:mx-5">
           {Array.from({ length: itemsPerPage }).map((_, index) => (
@@ -44,6 +51,6 @@ export const ListPokemon = ({ data, handleSelectedId }: IListPokemons) => {
       {currentItems.length < data.length && (
         <ShowMoreButton showMoreItems={showMoreItems} loadItems={loadItems} />
       )}
-    </div>
+    </>
   );
 };

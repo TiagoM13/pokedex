@@ -16,7 +16,7 @@ export const Button = () => {
       (100 * doc.scrollTop) / (doc.scrollHeight - doc.clientHeight)
     );
 
-    if (value >= 5) {
+    if (value >= 15) {
       setHeight(true);
     } else {
       setHeight(false);
@@ -28,7 +28,7 @@ export const Button = () => {
       type="button"
       title="back to the top"
       onClick={handleScrollToTop}
-      className="fixed bg-blue-600 p-2 mx-2 mb-6 rounded-md bottom-0 hover:scale-105 hover:brightness-95 transition-all animate-reveal z-10"
+      className="fixed bg-blue-600/75 p-2 mx-2 mb-6 rounded-md bottom-0 hover:scale-105 hover:bg-blue-600 transition-all animate-reveal z-10"
       style={{
         display: height ? 'block' : 'none',
       }}

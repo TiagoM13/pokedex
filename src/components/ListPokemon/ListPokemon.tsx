@@ -3,7 +3,7 @@ import React from 'react';
 import {
   LoadingSkeleton,
   PokemonCard,
-  Separate,
+  Separator,
   ShowMoreButton,
 } from '@components';
 import { useGetPokemonsData, usePagination } from '@hooks';
@@ -21,7 +21,7 @@ export const ListPokemon = ({ data, handleSelectedId }: IListPokemons) => {
 
   return (
     <>
-      <Separate loading={isLoading} amount={data.length} />
+      <Separator loading={isLoading} amount={data.length} />
 
       {isLoading ? (
         <div className="max-w-[1320px] grid grid-cols-6 gap-2 justify-items-center mt-8 px-2 mx-auto screen-5x:grid-cols-5 screen-4x:grid-cols-4 screen-3x:grid-cols-3 screen-2x:grid-cols-2 screen-1x:grid-cols-1 screen-1x:mx-5">

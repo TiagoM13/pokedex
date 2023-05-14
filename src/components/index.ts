@@ -10,7 +10,7 @@ export * from './Loading/Loading';
 export * from './LoadingSkeleton/CardLoadingSkeleton';
 export * from './Modal/Modal';
 export * from './PokemonCard/PokemonCard';
-export * from './Separate/Separate';
+export * from './Separator/Separator';
 export * from './ShowMoreButton/ShowMoreButton';
 export * from './SocialMedia/SocialMedia';
 export * from './TypeCard/TypeCard';

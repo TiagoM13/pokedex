@@ -1,12 +1,12 @@
 import React from 'react';
 import { MdCatchingPokemon } from 'react-icons/md';
 
-type SeparateProps = {
+type SeparatorProps = {
   loading: boolean;
   amount: number;
 };
 
-export const Separate = ({ loading, amount }: SeparateProps) => {
+export const Separator = ({ loading, amount }: SeparatorProps) => {
   const [count, setCount] = React.useState(0);
 
   React.useEffect(() => {

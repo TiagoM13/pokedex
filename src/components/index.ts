@@ -5,7 +5,6 @@ export * from './Footer/Footer';
 export * from './Header/Header';
 export * from './InputSearch/InputSearch';
 export * from './ListPokemon/ListPokemon';
-export * from './Loading/Loading';
 export * from './Modal/Modal';
 export * from './PokemonCard/PokemonCard';
 export * from './ShowMoreButton/ShowMoreButton';

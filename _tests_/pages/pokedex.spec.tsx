@@ -11,7 +11,6 @@ describe('<Pokedex />', () => {
     const mockPokemons = [
       { id: 1, name: 'Pikachu' },
       { id: 2, name: 'Charmander' },
-      // Adicione mais objetos de pokemons mockados, se necessário
     ];
 
     const mock = new MockAdapter(axios);

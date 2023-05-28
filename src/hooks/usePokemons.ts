@@ -41,5 +41,5 @@ export const useGetPokemonsData = () => {
     return setPokemons(filteredPokemons);
   };
 
-  return { pokemons, loading, FilterPokemon };
+  return { pokemons, loading, FilterPokemon, getPokemons };
 };

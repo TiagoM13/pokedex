@@ -26,12 +26,14 @@ export const Separator = ({ loading, amount }: SeparatorProps) => {
   }, [amount]);
 
   return (
-    <div className="w-full border-t border-t-zinc-300 px-8 pt-4 mt-10 flex items-center gap-2">
-      <MdCatchingPokemon size={25} color="red" />
-      <p className="text-xl font-semibold">
-        <span>{loading ? 0 : count} </span>
-        {count <= 1 ? 'Pokémon' : 'Pokémons'}
-      </p>
+    <div className="w-full border-t border-t-zinc-300 px-8 pt-4 mt-10">
+      <div className="max-w-[1320px] flex items-center gap-2 mx-auto">
+        <MdCatchingPokemon size={25} color="red" />
+        <p className="text-xl font-semibold">
+          <span>{loading ? 0 : count} </span>
+          {count <= 1 ? 'Pokémon' : 'Pokémons'}
+        </p>
+      </div>
     </div>
   );
 };

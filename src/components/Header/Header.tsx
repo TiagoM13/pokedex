@@ -8,7 +8,7 @@ import { ArrowLeft } from 'phosphor-react';
 export const Header = () => {
   return (
     <header className="bg-orange pt-4 px-4 h-[310px]">
-      <div className="flex justify-between">
+      <div className="max-w-[1320px] flex justify-between mx-auto">
         <Link
           to="/"
           reloadDocument

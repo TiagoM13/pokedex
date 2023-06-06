@@ -8,7 +8,8 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        orange: "url('./src/assets/background/background_orange.png')",
+        orange:
+          'linear-gradient(to right, #EE7B56, #DD613A, #EA5525, #E7430F,  #D43300)',
       },
       keyframes: {
         modal: {
@@ -29,6 +30,14 @@ module.exports = {
         loading: 'loading 0.6s linear infinite',
         modal: 'modal 0.6s ease-out',
       },
+    },
+    screens: {
+      'screen-5x': { max: '1100px' },
+      'screen-4x': { max: '1024px' },
+      'screen-3x': { max: '940px' },
+      'screen-2x': { max: '780px' },
+      'screen-1x': { max: '512px' },
+      'screen-xs': { max: '380px' },
     },
   },
   plugins: [require('@tailwindcss/line-clamp')],

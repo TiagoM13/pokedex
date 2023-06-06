@@ -1,16 +1,18 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-import { DetailsCard } from '@components/DetailsCard/DetailsCard';
-import { Footer } from '@components/Footer/Footer';
-import { Header } from '@components/Header/Header';
-import { InputSearch } from '@components/InputSearch/InputSearch';
-import { ListPokemon } from '@components/ListPokemon/ListPokemon';
-import { ContentModal } from '@components/Modal/Modal';
-import { useGetPokemonsData } from '@hooks/usePokemons';
-import { useSelectPokemon } from '@hooks/useSelectPokemon';
+import {
+  Button,
+  ContentModal,
+  DetailsCard,
+  Footer,
+  Header,
+  InputSearch,
+  ListPokemon,
+} from '@components';
+import { useGetPokemonsData, useSelectPokemon } from '@hooks';
 
-const Pokedex: React.FC = () => {
+const Pokedex = () => {
   const { pokemons, FilterPokemon } = useGetPokemonsData();
   const {
     active,
@@ -37,19 +39,21 @@ const Pokedex: React.FC = () => {
       <ContentModal active={active} onCloseModal={handleOnToggleModal}>
         {selectedItemId && (
           <DetailsCard
-            id={itemDetails?.id}
+            id={itemDetails?.id ?? 0}
             name={itemDetails?.name}
             types={itemDetails?.types}
             img={itemDetails?.sprites.other['official-artwork'].front_default}
-            weight={itemDetails?.weight!}
-            height={itemDetails?.height!}
-            abilities={itemDetails?.abilities!}
+            weight={itemDetails?.weight ?? 0}
+            height={itemDetails?.height ?? 0}
+            abilities={itemDetails?.abilities}
             stats={itemDetails?.stats}
           />
         )}
       </ContentModal>
+
+      <Button />
     </>
   );
 };
 
-export default Pokedex;
+export { Pokedex };

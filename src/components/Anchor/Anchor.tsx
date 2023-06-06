@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { IAnchor } from '@interfaces/anchor';
+import { IAnchor } from '@interfaces';
 
 export const Anchor = ({ children, url }: IAnchor) => {
   return (

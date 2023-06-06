@@ -1,15 +1,15 @@
 {
   "compilerOptions": {
-    "target": "esnext",
+    "target": "ESNext",
     "useDefineForClassFields": true,
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": ["dom", "dom.iterable", "es2020"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "esnext",
+    "module": "ESNext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -18,14 +18,14 @@
     "baseUrl": "./src",
     "paths": {
       "@assets/*": ["./assets/*"],
-      "@components/*": ["./components/*"],
-      "@hooks/*": ["./hooks/*"],
-      "@interfaces/*": ["./interfaces/*"],
-      "@routes/*": ["./routes/*"],
-      "@pages/*": ["./pages/*"],
-      "@utils/*": ["./utils/*"],
-      "@lib/*": ["./lib/*"],
-      "@theme/*": ["./theme/*"]
+      "@components": ["./components/index"],
+      "@hooks": ["./hooks/index"],
+      "@interfaces": ["./interfaces/index"],
+      "@routes": ["./routes/index"],
+      "@pages": ["./pages/index"],
+      "@utils": ["./utils/index"],
+      "@lib": ["./lib/index"],
+      "@theme": ["./theme/index"]
     },
     "typeRoots": ["node_modules/@types", "./types"]
   },
@@ -34,8 +34,8 @@
     "src/**/*.tsx",
     "src/**/*.js",
     "src/**/*.jsx",
-    "tests/**/*.ts",
-    "tests/**/*.tsx"
+    "_tests_/**/*.ts",
+    "_tests_/**/*.tsx"
   ],
   "exclude": ["node_modules", "dist"],
   "references": [{ "path": "./tsconfig.node.json" }]

@@ -1,4 +1,4 @@
-export interface IButtonProps {
+export interface IShowMoreButton {
   loadItems: boolean;
   showMoreItems: () => void;
 }

@@ -1,16 +1,15 @@
 import React from 'react';
 
-import { TypeCard } from '@components/TypeCard/TypeCard';
-import { ICardDatails } from '@interfaces/cardDatails';
-import { getNumberOrderFormat } from '@utils/getNumberOrderFormat';
+import { ICardDatails } from '@interfaces';
 import {
+  getNumberOrderFormat,
   getTypesToBackgroundColor,
   getTypesToIconsTypes,
-} from '@utils/getTheme';
+} from '@utils';
 
-import { BaseStats } from './components/BaseStats/BaseStats';
-import { InfoCard } from './components/InfoCard/InfoCard';
-import { Tab } from './components/Tab/Tab';
+import { BaseStats, InfoCard, Tab } from './components';
+
+import { TypeCard } from '..';
 
 export const DetailsCard = ({
   id,
@@ -25,12 +24,14 @@ export const DetailsCard = ({
   const [select, setSelect] = React.useState<'open' | 'closed'>('open');
 
   return (
-    <div className="bg-white w-[400px] mx-auto rounded-2xl border border-zinc-300 overflow-hidden">
+    <div className="bg-white w-[400px] mx-auto rounded-2xl border border-zinc-300 overflow-hidden  screen-1x:max-w-full">
       {/* image pokémon */}
       <div
         style={{
-          backgroundColor: id!
-            ? getTypesToBackgroundColor(types![0].type.name.toUpperCase())
+          backgroundColor: id
+            ? getTypesToBackgroundColor(
+                types && types[0].type.name.toUpperCase()
+              )
             : '#9d9b9b',
         }}
         className="bg-zinc-500 flex flex-col items-center text-white px-4 py-4 rounded-b-[50%]"
@@ -42,11 +43,11 @@ export const DetailsCard = ({
 
       {/* name pokémon */}
       <div className="w-full flex flex-col justify-between mt-6 px-4">
-        <strong className="text-2xl font-medium leading-tight capitalize">
+        <strong className="text-2xl font-medium leading-tight capitalize screen-xs:text-[22px]">
           {name}
         </strong>
         <span className="text-sm font-semibold text-zinc-500">
-          {getNumberOrderFormat(id!)}
+          {getNumberOrderFormat(id)}
         </span>
       </div>
 

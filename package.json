@@ -12,6 +12,7 @@
     "test:watch": "jest --watch --verbose",
     "test:coverage": "jest --coverage",
     "test:all": "yarn test && yarn test:coverage",
+    "lint": "eslint src --ext .ts --fix",
     "code:check": "yarn code:lint; yarn code:format --check",
     "code:clean": "yarn code:lint --fix; yarn code:format --write",
     "code:lint": "eslint --ext .js,.jsx,.ts,.tsx \"src/\"",

@@ -2,7 +2,11 @@
   "compilerOptions": {
     "target": "ESNext",
     "useDefineForClassFields": true,
-    "lib": ["dom", "dom.iterable", "es2020"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "es2020"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -17,17 +21,41 @@
     "jsx": "react-jsx",
     "baseUrl": "./src",
     "paths": {
-      "@assets/*": ["./assets/*"],
-      "@components": ["./components/index"],
-      "@hooks": ["./hooks/index"],
-      "@interfaces": ["./interfaces/index"],
-      "@routes": ["./routes/index"],
-      "@pages": ["./pages/index"],
-      "@utils": ["./utils/index"],
-      "@lib": ["./lib/index"],
-      "@theme": ["./theme/index"]
+      "@assets/*": [
+        "./assets/*"
+      ],
+      "@components": [
+        "./components/index"
+      ],
+      "@contexts": [
+        "./contexts/index"
+      ],
+      "@hooks": [
+        "./hooks/index"
+      ],
+      "@interfaces": [
+        "./interfaces/index"
+      ],
+      "@routes": [
+        "./routes/index"
+      ],
+      "@pages": [
+        "./pages/index"
+      ],
+      "@utils": [
+        "./utils/index"
+      ],
+      "@lib": [
+        "./lib/index"
+      ],
+      "@theme": [
+        "./theme/index"
+      ]
     },
-    "typeRoots": ["node_modules/@types", "./types"]
+    "typeRoots": [
+      "node_modules/@types",
+      "./types"
+    ]
   },
   "include": [
     "src/**/*.ts",
@@ -37,6 +65,13 @@
     "_tests_/**/*.ts",
     "_tests_/**/*.tsx"
   ],
-  "exclude": ["node_modules", "dist"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
 }

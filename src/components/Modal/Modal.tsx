@@ -1,9 +1,8 @@
 import React, { ReactNode } from 'react';
 import Modal from 'react-modal';
 
+import { usePokemonContext } from '@contexts';
 import { X } from 'phosphor-react';
-
-import { usePokemonContext } from 'contexts/PokemonContext';
 
 interface IModal {
   children: ReactNode;

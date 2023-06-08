@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
 
 import { TypeCard, ImageLazyLoader } from '@components';
@@ -42,10 +43,9 @@ export const PokemonCard = ({
               return (
                 <TypeCard
                   key={type.type.name}
-                  icon={`${
-                    type.type.name &&
+                  icon={`${type.type.name &&
                     getTypesToIconsTypes(type.type.name.toUpperCase())
-                  }`}
+                    }`}
                   type={type.type.name}
                 />
               );

@@ -25,7 +25,7 @@ export const useGetPokemonsData = () => {
       .then((response) => setPokemons(response));
   };
 
-  const FilterPokemon = (name: string) => {
+  const handleFilterPokemon = (name: string) => {
     const filteredPokemons = [];
 
     if (name === '') {
@@ -41,5 +41,5 @@ export const useGetPokemonsData = () => {
     return setPokemons(filteredPokemons);
   };
 
-  return { pokemons, loading, FilterPokemon, getPokemons };
+  return { pokemons, loading, handleFilterPokemon, getPokemons };
 };

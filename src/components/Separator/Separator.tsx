@@ -1,21 +1,21 @@
 import React from 'react';
 import { MdCatchingPokemon } from 'react-icons/md';
 
-type SeparatorProps = {
-  loading: boolean;
-  amount: number;
-};
+import { usePokemonContext } from '@contexts';
 
-export const Separator = ({ loading, amount }: SeparatorProps) => {
+export const Separator = () => {
+  const { loading, pokemons } = usePokemonContext();
   const [count, setCount] = React.useState(0);
+
+  const amout = pokemons.length;
 
   React.useEffect(() => {
     const timer = setInterval(() => {
       setCount((count) => {
-        if (count >= amount) {
+        if (count >= amout) {
           clearInterval(timer);
 
-          return amount;
+          return amout;
         }
 
         return count + 1;
@@ -23,11 +23,11 @@ export const Separator = ({ loading, amount }: SeparatorProps) => {
     }, 10);
 
     return () => clearInterval(timer);
-  }, [amount]);
+  }, [amout]);
 
   return (
-    <div className="w-full border-t border-t-zinc-300 px-8 pt-4 mt-10">
-      <div className="max-w-[1320px] flex items-center gap-2 mx-auto">
+    <div className="mt-10 w-full border-t border-t-zinc-300 px-8 pt-4">
+      <div className="mx-auto flex max-w-[1320px] items-center gap-2">
         <MdCatchingPokemon size={25} color="red" />
         <p className="text-xl font-semibold">
           <span>{loading ? 0 : count} </span>

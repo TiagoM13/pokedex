@@ -7,12 +7,12 @@ import { ArrowLeft } from 'phosphor-react';
 
 export const Header = () => {
   return (
-    <header className="bg-orange pt-4 px-4 h-[310px]">
-      <div className="max-w-[1320px] flex justify-between mx-auto">
+    <header className="h-[310px] bg-orange px-4 pt-4">
+      <div className="mx-auto flex max-w-[1320px] justify-between">
         <Link
           to="/"
           reloadDocument
-          className="text-white font-semibold flex items-center gap-1 mb-8 hover:text-blue-700 transition-all"
+          className="mb-8 flex items-center gap-1 font-semibold text-white transition-all hover:text-blue-700"
         >
           <ArrowLeft weight="bold" />
           Home

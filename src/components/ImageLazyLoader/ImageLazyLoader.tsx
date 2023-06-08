@@ -12,13 +12,13 @@ export const ImageLazyLoader = ({ imageUrl, name }: ImageProps) => {
 
   if (isLoading) {
     return (
-      <div className="w-[90px] h-[90px] ml-auto rounded-full bg-gray-300/50 animate-pulse screen-3x:w-[140px] screen-3x:h-[140px] screen-2x:w-36 screen-2x:h-36" />
+      <div className="ml-auto h-[90px] w-[90px] animate-pulse rounded-full bg-gray-300/50 screen-3x:h-[140px] screen-3x:w-[140px] screen-2x:h-36 screen-2x:w-36" />
     );
   }
 
   return (
     <img
-      className="w-full object-cotain overflow-hidden screen-2x:max-w-[200px]"
+      className="object-cotain w-full overflow-hidden screen-2x:max-w-[200px]"
       src={imageSrc || ''}
       alt={`Pokémon - ${name}`}
       loading="lazy"

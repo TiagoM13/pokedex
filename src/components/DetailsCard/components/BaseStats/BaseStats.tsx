@@ -8,7 +8,7 @@ import { ProgressBar } from '..';
 export const BaseStats = ({ stats }: IBaseStats) => {
   return (
     <div className="flex flex-col items-center py-4">
-      <h3 className="flex items-center text-sm font-semibold text-zinc-600 gap-2 mb-1 uppercase">
+      <h3 className="mb-1 flex items-center gap-2 text-sm font-semibold uppercase text-zinc-600">
         <ImStatsBars size={15} className="text-zinc-600" />
         Base Stats
       </h3>
@@ -16,7 +16,7 @@ export const BaseStats = ({ stats }: IBaseStats) => {
         return (
           <div
             key={index}
-            className="w-full justify-between items-center flex gap-2 px-4 text-zinc-700"
+            className="flex w-full items-center justify-between gap-2 px-4 text-zinc-700"
           >
             <div className="w-[200px] screen-xs:w-[180px]">
               <span className="text-sm font-semibold screen-xs:text-xs">

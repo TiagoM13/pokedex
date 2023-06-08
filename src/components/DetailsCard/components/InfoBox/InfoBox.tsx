@@ -5,7 +5,7 @@ import { IInfoBox } from '@interfaces';
 export const InfoBox = ({ title, icon, component }: IInfoBox) => {
   return (
     <div className="w-full px-2">
-      <h3 className="flex items-center justify-center text-sm font-semibold text-zinc-600 gap-2 mb-1 uppercase screen-xs:text-xs">
+      <h3 className="mb-1 flex items-center justify-center gap-2 text-sm font-semibold uppercase text-zinc-600 screen-xs:text-xs">
         {icon}
         {title}
       </h3>

@@ -10,10 +10,11 @@ import {
   InputSearch,
   ListPokemon,
 } from '@components';
-import { PokemonProvider, usePokemonContext } from '@contexts';
+import { PokemonProvider, SelectedPokemonProvider } from '@contexts';
+import { useSelectedPokemonContext } from '@hooks';
 
 const Pokedex = () => {
-  const { itemDetails, selectedItemId } = usePokemonContext();
+  const { itemDetails, selectedItemId } = useSelectedPokemonContext();
 
   return (
     <>
@@ -52,7 +53,9 @@ const Pokedex = () => {
 const PokedexContext = () => {
   return (
     <PokemonProvider>
-      <Pokedex />
+      <SelectedPokemonProvider>
+        <Pokedex />
+      </SelectedPokemonProvider>
     </PokemonProvider>
   );
 };

@@ -6,8 +6,7 @@ import {
   Separator,
   ShowMoreButton,
 } from '@components';
-import { usePokemonContext } from '@contexts';
-import { usePagination } from '@hooks';
+import { usePokemonContext, usePagination } from '@hooks';
 import { IPokemons } from '@interfaces';
 
 export const ListPokemon = () => {

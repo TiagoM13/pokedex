@@ -11,7 +11,7 @@ export const Tab = ({ title, isActive = false, status, ...rest }: TabProps) => {
     <button
       {...rest}
       type="button"
-      className="h-11 flex flex-1 px-5 items-center justify-center text-sm"
+      className="flex h-11 flex-1 items-center justify-center px-5 text-sm"
       style={{
         borderBottom: isActive ? '2px solid #000000' : '',
         color: isActive ? '#000000' : '',

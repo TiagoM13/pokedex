@@ -1,7 +1,7 @@
 import React from 'react';
 import { MdCatchingPokemon } from 'react-icons/md';
 
-import { usePokemonContext } from '@contexts';
+import { usePokemonContext } from '@hooks';
 
 export const Separator = () => {
   const { loading, pokemons } = usePokemonContext();

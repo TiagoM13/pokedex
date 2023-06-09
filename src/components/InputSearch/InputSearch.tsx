@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { usePokemonContext } from '@contexts';
+import { usePokemonContext } from '@hooks';
 import { MagnifyingGlass } from 'phosphor-react';
 
 export const InputSearch = () => {

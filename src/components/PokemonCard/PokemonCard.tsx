@@ -2,7 +2,7 @@
 import React from 'react';
 
 import { TypeCard, ImageLazyLoader } from '@components';
-import { usePokemonContext } from '@contexts';
+import { useSelectedPokemonContext } from '@hooks';
 import { IPokemonCard } from '@interfaces';
 import {
   getNumberOrderFormat,
@@ -13,14 +13,14 @@ import {
 export const PokemonCard = ({
   pokemon
 }: IPokemonCard) => {
-  const { selectPokemon } = usePokemonContext();
+  const { handleSelectPokemon } = useSelectedPokemonContext();
 
   return (
     <li className="w-full">
       <button
         type="button"
         title={`Pokémon - ${pokemon.data.name.toUpperCase()}`}
-        onClick={() => selectPokemon(pokemon.data.id)}
+        onClick={() => handleSelectPokemon(pokemon.data.id)}
         style={{
           backgroundColor: pokemon.data.types[0].type.name
             ? getTypesToBackgroundColor(pokemon.data.types[0].type.name.toUpperCase())

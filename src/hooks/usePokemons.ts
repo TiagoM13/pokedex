@@ -1,5 +1,5 @@
-/* eslint-disable no-restricted-syntax */
-import { useEffect, useState } from 'react';
+/* eslint-disable guard-for-in */
+import { useEffect, useState, useCallback } from 'react';
 
 import { IPokemons } from '@interfaces';
 import axios from 'axios';
@@ -15,8 +15,9 @@ export const useGetPokemonsData = () => {
 
   const getPokemons = async () => {
     const endpoints = [];
+    const count = 1000; // total são 1281 pokemons
 
-    for (let i = 1; i <= 151; i++) {
+    for (let i = 1; i <= count; i++) {
       endpoints.push(`${process.env.VITE_URL_API}/${i}`);
     }
 
@@ -25,20 +26,28 @@ export const useGetPokemonsData = () => {
       .then((response) => setPokemons(response));
   };
 
-  const handleFilterPokemon = (name: string) => {
-    const filteredPokemons = [];
+  const handleFilterPokemon = (query: string) => {
+    const filteredPokemons: IPokemons[] = [];
 
-    if (name === '') {
+    if (query === '') {
       getPokemons();
+      return;
     }
 
+    const searchQuery = query.toLowerCase();
+    const isNumericQuery = /^[0-9]+$/.test(searchQuery);
+
     for (const i in pokemons) {
-      if (pokemons[i].data.name.includes(name.toLocaleLowerCase())) {
+      const pokemon = pokemons[i].data;
+      if (
+        pokemon.name.toLowerCase().includes(searchQuery) ||
+        (isNumericQuery && pokemon.id.toString().includes(searchQuery))
+      ) {
         filteredPokemons.push(pokemons[i]);
       }
     }
 
-    return setPokemons(filteredPokemons);
+    setPokemons(filteredPokemons);
   };
 
   return { pokemons, loading, handleFilterPokemon, getPokemons };

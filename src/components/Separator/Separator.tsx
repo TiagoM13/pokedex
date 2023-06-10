@@ -20,7 +20,7 @@ export const Separator = () => {
 
         return count + 1;
       });
-    }, 10);
+    }, 1);
 
     return () => clearInterval(timer);
   }, [amout]);

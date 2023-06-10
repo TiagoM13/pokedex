@@ -20,7 +20,7 @@ export const ProgressBar = ({ amount }: IProgressBar) => {
   }, [percentage]);
 
   return (
-    <div role="progressbar" className="h-2 w-full bg-zinc-400 rounded">
+    <div role="progressbar" className="h-2 w-full rounded bg-zinc-400">
       <div
         className="h-2 rounded-xl bg-green-400 transition-all duration-500"
         style={{

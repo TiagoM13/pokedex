@@ -28,7 +28,7 @@ export const Button = () => {
       type="button"
       title="back to the top"
       onClick={handleScrollToTop}
-      className="fixed bg-blue-600/75 p-2 mx-2 mb-6 rounded-md bottom-0 hover:scale-105 hover:bg-blue-600 transition-all animate-reveal z-10"
+      className="fixed bottom-0 z-10 mx-2 mb-6 animate-reveal rounded-md bg-blue-600/75 p-2 transition-all hover:scale-105 hover:bg-blue-600"
       style={{
         display: height ? 'block' : 'none',
       }}

@@ -8,6 +8,7 @@ module.exports = {
     '\\.(css|less|sass|scss)$': 'identity-obj-proxy',
     '^@pages': '<rootDir>/src/pages/index.ts',
     '^@components': '<rootDir>/src/components/index.ts',
+    '^@contexts': '<rootDir>/src/contexts/index.ts',
     '^@interfaces': '<rootDir>/src/interfaces/index.ts',
     '^@hooks': '<rootDir>/src/hooks/index.ts',
     '^@utils': '<rootDir>/src/utils/index.ts',

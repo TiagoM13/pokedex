@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
 
 import { ICardDatails } from '@interfaces';
@@ -30,8 +31,8 @@ export const DetailsCard = ({
         style={{
           backgroundColor: id
             ? getTypesToBackgroundColor(
-                types && types[0].type.name.toUpperCase()
-              )
+              types && types[0].type.name.toUpperCase()
+            )
             : '#9d9b9b',
         }}
         className="bg-zinc-500 flex flex-col items-center text-white px-4 py-4 rounded-b-[50%]"
@@ -61,10 +62,9 @@ export const DetailsCard = ({
             >
               <TypeCard
                 type={type.type.name}
-                icon={`${
-                  type.type.name &&
+                icon={`${type.type.name &&
                   getTypesToIconsTypes(type.type.name.toUpperCase())
-                }`}
+                  }`}
               />
             </div>
           );

@@ -10,17 +10,11 @@ import {
   InputSearch,
   ListPokemon,
 } from '@components';
-import { useGetPokemonsData, useSelectPokemon } from '@hooks';
+import { PokemonProvider, SelectedPokemonProvider } from '@contexts';
+import { useSelectedPokemonContext } from '@hooks';
 
 const Pokedex = () => {
-  const { pokemons, FilterPokemon } = useGetPokemonsData();
-  const {
-    active,
-    itemDetails,
-    handleSelected,
-    selectedItemId,
-    handleOnToggleModal,
-  } = useSelectPokemon();
+  const { itemDetails, selectedItemId } = useSelectedPokemonContext();
 
   return (
     <>
@@ -31,12 +25,12 @@ const Pokedex = () => {
 
       <Header />
 
-      <InputSearch getFilterPokemon={FilterPokemon} />
+      <InputSearch />
 
-      <ListPokemon data={pokemons} handleSelectedId={handleSelected} />
+      <ListPokemon />
       <Footer />
 
-      <ContentModal active={active} onCloseModal={handleOnToggleModal}>
+      <ContentModal>
         {selectedItemId && (
           <DetailsCard
             id={itemDetails?.id ?? 0}
@@ -56,4 +50,14 @@ const Pokedex = () => {
   );
 };
 
-export { Pokedex };
+const PokedexContext = () => {
+  return (
+    <PokemonProvider>
+      <SelectedPokemonProvider>
+        <Pokedex />
+      </SelectedPokemonProvider>
+    </PokemonProvider>
+  );
+};
+
+export { PokedexContext as Pokedex };

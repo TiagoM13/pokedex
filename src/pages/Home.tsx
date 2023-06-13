@@ -32,7 +32,7 @@ const Home = () => {
           </div>
 
           <div className="my-4 py-4 screen-xs:py-0">
-            <Link to="/Pokedex" reloadDocument>
+            <Link to="/pokedex" reloadDocument>
               <button
                 type="button"
                 className="flex items-center justify-between rounded-md bg-yellow-400 p-3 text-lg font-bold shadow-black drop-shadow-2xl transition duration-500 hover:bg-zinc-100 screen-xs:text-base"

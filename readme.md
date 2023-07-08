@@ -1,4 +1,8 @@
-# 🚀 Pokedex - React 
+<h1 style="text-align: center">🚀 Pokedex - React</h1> 
+
+<div>
+  <img src="./src/assets/img/pikachu-2.png" width="350" style="margin: 0 auto; display: block" alt="Home - Pokedex" />
+</div>
 
 A Pokédex é uma ferramenta essencial para treinadores de Pokémon. Ela é um dispositivo eletrônico que armazena informações detalhadas sobre diferentes espécies de Pokémon encontradas ao longo da jornada. Através da Pokédex, os treinadores podem aprender sobre as características, habilidades e evoluções de cada Pokémon, auxiliando-os na estratégia de batalha e na busca por completar a sua coleção.
 

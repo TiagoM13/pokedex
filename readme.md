@@ -49,7 +49,7 @@ Instale as dependências
 Inicie o servidor
 
 ```bash
-  npm dev
+  npm run dev
 ```
 
 ## 🔧 Stack utilizada

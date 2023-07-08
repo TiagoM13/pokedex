@@ -6,7 +6,7 @@ Esta aplicação mostra uma listagem de todos os Pokemons, lista suas caracteris
 
 ---
 
-## Demonstração
+## 📷 Demonstração
 
 <div>
   <img src="./src/assets/video/Home-Pokédex-Google-Chrome-2023-07-07-21-59-42.gif" width="100%" alt="Home - Pokedex" />
@@ -14,7 +14,7 @@ Esta aplicação mostra uma listagem de todos os Pokemons, lista suas caracteris
 
 ----
 
-## Funcionalidades
+## 🔗 Funcionalidades
 
 - Listagem 
 - Preview e detalhes de cada Pokémon
@@ -26,7 +26,7 @@ Esta aplicação mostra uma listagem de todos os Pokemons, lista suas caracteris
 
 ---
 
-## Rodando localmente
+## 🔖 Rodando localmente
 
 Clone o projeto
 
@@ -52,7 +52,7 @@ Inicie o servidor
   npm dev
 ```
 
-## Stack utilizada
+## 🔧 Stack utilizada
 
 - [React](https://react.dev/)
 - [React Hooks](https://react.dev/reference/react)

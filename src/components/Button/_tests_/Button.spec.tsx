@@ -1,10 +1,15 @@
 import React from 'react';
+import '@testing-library/jest-dom';
 
 import { Button } from '@components';
 import { fireEvent, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 describe('<Button/>', () => {
+  beforeEach(() => {
+    window.scrollTo = jest.fn();
+  });
+
   it('renders the button component', () => {
     const { getByTitle } = render(<Button />);
     const buttonElement = getByTitle('back to the top');
@@ -12,7 +17,7 @@ describe('<Button/>', () => {
     expect(buttonElement).toBeInTheDocument();
   });
 
-  it('button is hidden when height is false', () => {
+  it('should  button be hidden when height is false', () => {
     const { getByTitle } = render(<Button />);
     const buttonElement = getByTitle('back to the top');
 
@@ -23,18 +28,14 @@ describe('<Button/>', () => {
     expect(buttonElement).not.toBeVisible();
   });
 
-  it('updates button visibility based on scroll position', () => {
+  it('should the display none for the button', () => {
     const { getByTitle } = render(<Button />);
     const buttonElement = getByTitle('back to the top');
 
-    jest.spyOn(React, 'useState').mockReturnValue([true, jest.fn()]);
-
-    userEvent.click(buttonElement);
-
-    expect(buttonElement).toBeInTheDocument();
+    expect(buttonElement).toHaveStyle('display: none');
   });
 
-  it('scrolls to top when button is clicked', () => {
+  it('should scrolls to top when button is clicked', () => {
     const { getByTitle } = render(<Button />);
     const buttonElement = getByTitle('back to the top');
 

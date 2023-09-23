@@ -7,13 +7,12 @@ import { Anchor } from '../Anchor';
 describe('<Anchor/>', () => {
   it('should render anchor with correct URL', () => {
     const link = 'https:google.com';
-    const { debug, getByText } = render(<Anchor url={link}>Link Teste</Anchor>);
+    const { getByText } = render(<Anchor url={link}>Link Teste</Anchor>);
 
     const anchorElement = getByText('Link Teste');
 
     expect(anchorElement).toBeTruthy();
     expect(anchorElement).toHaveAttribute('href', link);
-    debug();
   });
 
   it('should have "noreferrer" in the "rel" attribute', () => {

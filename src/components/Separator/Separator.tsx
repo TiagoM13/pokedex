@@ -29,7 +29,7 @@ export const Separator = () => {
     <div className="mt-10 w-full border-t border-t-zinc-300 px-8 pt-4">
       <div className="mx-auto flex max-w-[1320px] items-center gap-2">
         <MdCatchingPokemon size={25} color="red" />
-        <p className="text-xl font-semibold">
+        <p data-testid="pokemon-count" className="text-xl font-semibold">
           <span>{loading ? 0 : count} </span>
           {count <= 1 ? 'Pokémon' : 'Pokémons'}
         </p>

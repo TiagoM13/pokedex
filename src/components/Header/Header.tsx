@@ -10,11 +10,12 @@ export const Header = () => {
     <header className="h-[310px] bg-orange px-4 pt-4">
       <div className="mx-auto flex max-w-[1320px] justify-between">
         <Link
+          data-testid="link"
           to="/"
           reloadDocument
           className="mb-8 flex items-center gap-1 font-semibold text-white transition-all hover:text-blue-700"
         >
-          <ArrowLeft weight="bold" />
+          <ArrowLeft data-testid="arrow-icon" weight="bold" />
           Home
         </Link>
 
@@ -30,7 +31,7 @@ export const Header = () => {
       </div>
 
       <div className="flex justify-center">
-        <img src={Pikachu} alt="Pokebola" width="350px" className="-mb-11" />
+        <img src={Pikachu} alt="Pikachu" width="350px" className="-mb-11" />
       </div>
     </header>
   );

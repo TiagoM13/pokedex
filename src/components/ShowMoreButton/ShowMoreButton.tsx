@@ -15,6 +15,7 @@ export const ShowMoreButton = ({
       disabled={loadItems}
     >
       <MdOutlineCatchingPokemon
+        data-testid="icon"
         size={25}
         className={`text-white ${loadItems && 'animate-loading'}`}
       />

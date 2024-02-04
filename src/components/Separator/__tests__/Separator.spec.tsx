@@ -29,7 +29,7 @@ describe('Separator', () => {
 
     const { getByTestId } = render(
       <PokemonProvider>
-        <Separator />
+        <Separator data={[]} />
       </PokemonProvider>
     );
 

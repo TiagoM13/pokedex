@@ -2,12 +2,17 @@ import React from 'react';
 import { MdCatchingPokemon } from 'react-icons/md';
 
 import { usePokemonContext } from '@hooks';
+import { IPokemons } from '@interfaces';
 
-export const Separator = () => {
-  const { loading, pokemons } = usePokemonContext();
+type Props = {
+  data: IPokemons[];
+};
+
+export const Separator = ({ data }: Props) => {
+  const { loading } = usePokemonContext();
   const [count, setCount] = React.useState(0);
 
-  const amout = pokemons.length;
+  const amout = data?.length;
 
   React.useEffect(() => {
     const timer = setInterval(() => {

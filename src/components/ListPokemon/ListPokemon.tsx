@@ -9,11 +9,20 @@ import {
 import { usePokemonContext, usePagination } from '@hooks';
 import { IPokemons } from '@interfaces';
 
-export const ListPokemon = () => {
+interface Props {
+  query: string;
+}
+
+export const ListPokemon = ({ query }: Props) => {
   const { loading, pokemons } = usePokemonContext();
+
+  const filteredPokemons = pokemons.filter((pokemon) =>
+    pokemon.data.name?.toLowerCase().includes(query.toLowerCase())
+  );
+
   const itemsPerPage = 20;
   const { currentItems, showMoreItems, loadItems } = usePagination<IPokemons>({
-    data: pokemons,
+    data: filteredPokemons,
     itemsPerPage,
   });
 
@@ -21,7 +30,11 @@ export const ListPokemon = () => {
 
   return (
     <>
-      <Separator />
+      <Separator data={filteredPokemons} />
+
+      {filteredPokemons.length === 0 && !isLoading && (
+        <span>Not found pokemon</span>
+      )}
 
       {isLoading ? (
         <div className="mx-auto mt-8 grid max-w-[1320px] grid-cols-6 justify-items-center gap-2 px-2 screen-5x:grid-cols-5 screen-4x:grid-cols-4 screen-3x:grid-cols-3 screen-2x:grid-cols-2 screen-1x:mx-5 screen-1x:grid-cols-1">
@@ -37,9 +50,11 @@ export const ListPokemon = () => {
         </ul>
       )}
 
-      {currentItems.length < pokemons.length && (
-        <ShowMoreButton showMoreItems={showMoreItems} loadItems={loadItems} />
-      )}
+      {!isLoading &&
+        currentItems.length < pokemons.length &&
+        filteredPokemons && (
+          <ShowMoreButton showMoreItems={showMoreItems} loadItems={loadItems} />
+        )}
     </>
   );
 };

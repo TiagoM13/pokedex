@@ -14,6 +14,7 @@ import { PokemonProvider, SelectedPokemonProvider } from '@contexts';
 import { useSelectedPokemonContext } from '@hooks';
 
 const Pokedex = () => {
+  const [query, setQuery] = React.useState('');
   const { itemDetails, selectedItemId } = useSelectedPokemonContext();
 
   return (
@@ -25,9 +26,9 @@ const Pokedex = () => {
 
       <Header />
 
-      <InputSearch />
+      <InputSearch onChange={setQuery} query={query} />
 
-      <ListPokemon />
+      <ListPokemon query={query} />
       <Footer />
 
       <ContentModal>

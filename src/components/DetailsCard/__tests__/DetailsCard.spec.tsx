@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { expect } from '@jest/globals';
 import { act, fireEvent, render } from '@testing-library/react';
 import { formatHeightWeight, getNumberOrderFormat } from '@utils';
 

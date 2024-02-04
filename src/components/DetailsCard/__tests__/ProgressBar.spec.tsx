@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { render, waitFor } from '@testing-library/react';
-import { debug } from 'console';
 
 import { ProgressBar } from '../components';
 
